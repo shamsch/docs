@@ -21,6 +21,7 @@ All of the following commands will work by default in any vim environment. I use
 
 ## Search and Replace
 - `/` - Start search
+- `*` - Search for word under cursor
 - `n` - Next search result
 - `N` - Previous search result
 - `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
