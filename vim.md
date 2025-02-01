@@ -1,4 +1,5 @@
-# Practical Vim Shortcuts Reference Guide
+# Vim Motion I know and use
+All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
 
 ## Navigation
 ### Basic Movement
