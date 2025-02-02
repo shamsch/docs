@@ -2,7 +2,31 @@
 
 All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
 
-## Navigation
+However, in VSCode, I like to make a few changes. Paste these to your settings.json file:
+
+```json
+    // Vim settings
+	"vim.hlsearch": true, // Highlights search results
+    // Map jk to escape
+	"vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.commandLineModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+```
 
 ### Basic Movement
 
