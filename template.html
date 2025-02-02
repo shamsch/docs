@@ -12,8 +12,8 @@
     const urlParams = new URLSearchParams(window.location.search);
     const file = urlParams.get('file');
     
-    // Fetch and render the MD file
-    fetch(file)
+    // Fetch and render the MD file with proper path
+    fetch(`md/${file}`)
       .then(response => response.text())
       .then(md => {
         document.getElementById('content').innerHTML = marked.parse(md);
