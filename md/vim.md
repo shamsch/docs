@@ -9,6 +9,7 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 	"vim.hlsearch": true, // Highlights search results
 	"vim.incsearch": true // Shows result as you search 
 ```
+Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my keyboard settings, but that not really limited to vim but rather system wide.
 
 ### Basic Movement
 
