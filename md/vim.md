@@ -38,6 +38,7 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `*` - Search for word under cursor
 -   `n` - Next search result
 -   `N` - Previous search result
+-   `gd` - Go to definition 
 -   `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
 
 ## Editing
@@ -51,15 +52,26 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 ### Delete and Modify
 
 -   `x` - Delete character under cursor
--   `dd` - Cut entire line
+-   `dw` - Delete wrod
+-   `dd` - Delete entire line
+-   `yw` - Copy word
 -   `yy` - Copy entire line
 -   `p` - Paste after cursor
 
-### Nifty tricks 
--   `ciw` - Change (delete) inside (current) word
--   `yiw` - Yank (copy) inside (current) word
--   `vat` - Select between tag including tag
--   `vit` - Select between tag excluding tag itself 
+### Nifty tricks
+Text operations (use `c` to change, `d` to delete, `y` to copy, `v` to select):
+* `iw` - Inside word (e.g. `ciw`, `yiw`)
+* `i"` / `a"` - Inside quotes / including quotes (`Hello` vs `"Hello"`)
+* `i{` / `a{` - Inside braces / including braces (`x = 1` vs `{x = 1}`)
+* `i(` / `a(` - Inside parens / including parens (`arg` vs `(arg)`)
+* `it` / `at` - Inside tags / including tags (`text` vs `<div>text</div>`)
+* `ip` / `ap` - Inside paragraph / including surrounding newlines
+
+For example:
+* `cit` changes between `<div>text</div>` tags → `<div>|</div>`
+* `dap` deletes paragraph including blank lines
+* `yi"` copies inside `"Hello"` → `Hello`
+* `va{` selects `{x = 1}` including braces
 
 ### Undo/Redo
 
