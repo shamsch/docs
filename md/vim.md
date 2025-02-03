@@ -41,6 +41,13 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `gd` - Go to definition 
 -   `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
 
+## Other navigational commands
+
+-   `Ctrl + o` - Jump back to previous location
+-   `Ctrl + i` - Jump forward to next location
+-   `Ctrl + u` - Move half page up
+-   `Ctrl + d` - Move half page down
+
 ## Editing
 
 ### Insert Mode
