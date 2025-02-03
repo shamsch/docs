@@ -32,6 +32,13 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `b` - Move to beginning of current/previous word
 -   `e` - Move to end of word
 
+## Other navigational commands
+
+-   `Ctrl + o` - Jump back to previous location
+-   `Ctrl + i` - Jump forward to next location
+-   `Ctrl + u` - Move half page up
+-   `Ctrl + d` - Move half page down
+
 ## Search and Replace
 
 -   `/` - Start search
@@ -40,13 +47,6 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `N` - Previous search result
 -   `gd` - Go to definition 
 -   `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
-
-## Other navigational commands
-
--   `Ctrl + o` - Jump back to previous location
--   `Ctrl + i` - Jump forward to next location
--   `Ctrl + u` - Move half page up
--   `Ctrl + d` - Move half page down
 
 ## Editing
 
