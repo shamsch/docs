@@ -5,27 +5,9 @@ All of the following commands will work by default in any vim environment. I use
 However, in VSCode, I like to make a few changes. Paste these to your settings.json file:
 
 ```json
-    // Vim settings
+    	// Vim settings
 	"vim.hlsearch": true, // Highlights search results
-    // Map jk to escape
-	"vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.commandLineModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        }
-    ],
+	"vim.incsearch": true // Shows result as you search 
 ```
 
 ### Basic Movement
@@ -34,6 +16,8 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `j` - Move cursor down
 -   `k` - Move cursor up
 -   `l` - Move cursor right
+-   `]` or `[` - Move over paragraph (next new line without text)
+-   `(` or `)` - Move over sentence 
 
 ### Line Navigation
 
@@ -70,6 +54,8 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `dd` - Cut entire line
 -   `yy` - Copy entire line
 -   `p` - Paste after cursor
+-   `ciw` - Change (delete) inside (current) word
+-   `yiw` - Yank (copy) inside (current) word
 
 ### Undo/Redo
 
