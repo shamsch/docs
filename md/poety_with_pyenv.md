@@ -32,3 +32,5 @@ Pyenv is another tool that can help manage Python versions and virtual environme
 
 -  To check which python environment you are using
     `pyenv which python`
+
+More information on their [repository](https://github.com/pyenv/pyenv) on GitHub. Preferably install with **Homebrew**.
