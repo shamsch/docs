@@ -81,4 +81,4 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 
 ## Mode Switching
 
--   `Esc` or `Cmd + c` - Return to normal mode (from visual or insert mode)
+-   `Esc` - Return to normal mode (from visual or insert mode)
