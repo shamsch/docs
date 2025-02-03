@@ -4,8 +4,7 @@ Managing Python dependencies and virtual environments can be a pain. I have a no
 
 ## Pyenv
 
-Pyenv is another tool that can help manage Python versions and virtual environments. It is a bit more complicated than pyenv, but it is also more powerful.
-
+Pyenv is another tool that can help manage Python versions and virtual environments. Preferably install with **Homebrew**.
 
 ### Common Commands 
 
@@ -33,4 +32,4 @@ Pyenv is another tool that can help manage Python versions and virtual environme
 -  To check which python environment you are using
     `pyenv which python`
 
-More information on their [repository](https://github.com/pyenv/pyenv) on GitHub. Preferably install with **Homebrew**.
+More information on their [repository](https://github.com/pyenv/pyenv) on GitHub. 
