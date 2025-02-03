@@ -2,6 +2,7 @@
 
 -   Check what version of python you have installed
     `pyenv versions`
+
 -   This is how you install a new version of python
     `pyenv install 3.11.0`
 
