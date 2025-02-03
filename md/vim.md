@@ -89,8 +89,8 @@ For example:
 
 -   `V` - Select current line
 -   `ggVG` - Select entire file
--   `>` - Indent selected text
--   `<` - Unindent selected text
+-   `>>` - Indent selected text
+-   `<<` - Unindent selected text
 
 ## Window Management
 
