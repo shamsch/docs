@@ -54,8 +54,12 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 -   `dd` - Cut entire line
 -   `yy` - Copy entire line
 -   `p` - Paste after cursor
+
+## Nifty tricks 
 -   `ciw` - Change (delete) inside (current) word
 -   `yiw` - Yank (copy) inside (current) word
+-   `vat` - Select between tag including tag
+-   `vit` - Select between tag excluding tag itself 
 
 ### Undo/Redo
 
