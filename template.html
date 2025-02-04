@@ -11,6 +11,7 @@
 	<body>
 		<button onclick="window.history.back()">← Back</button>	
 		<div id="content"></div>
+		<button onclick="window.scrollTo(0, 0)">↑ Top</button>	
 		<script>
 			const urlParams = new URLSearchParams(window.location.search);
 			const file = urlParams.get("file");

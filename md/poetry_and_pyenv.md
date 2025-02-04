@@ -1,12 +1,10 @@
 # Python Dependency & Version Management Guide
 
-## Core Tools Specialization
 * **Poetry**: Dependency management + virtual environments 
 * **pyenv**: Python version installation/switching
 
-## Tool Responsibilities
 
-### Poetry Essentials
+## Poetry Essentials
 
 #### Installation & Setup
 ```bash
@@ -45,6 +43,7 @@ pandas = "^2.0.2"
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
 ```
+> You shouldn't need to manually edit this file or `poetry.lock` which is auto-generated.
 
 #### Virtual Environment Management
 ```bash
@@ -53,7 +52,7 @@ poetry env list     # List project venvs
 poetry env use 3.11 # Specify Python version
 ```
 
-### pyenv Essentials
+## pyenv Essentials
 
 #### Python Version Management
 ```bash
@@ -93,5 +92,3 @@ poetry run python --version    # Python 3.11.4
 ```bash
 poetry add numpy    # Installed in isolated venv
 ```
-
-Key integration: Poetry automatically detects pyenv's Python versions and uses them when creating virtual environments. The `python` version constraint in `pyproject.toml` ensures compatibility across environments.
