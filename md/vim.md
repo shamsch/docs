@@ -68,7 +68,7 @@ Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my key
 
 ### Nifty tricks
 Text operations (use `c` to change, `d` to delete, `y` to copy, `v` to select):
-* `iw` - Inside word (e.g. `ciw`, `yiw`)
+* `iw` / `aw` - Inside word / including whitespace around word (`Hello` vs `|Hello`)
 * `i"` / `a"` - Inside quotes / including quotes (`Hello` vs `"Hello"`)
 * `i{` / `a{` - Inside braces / including braces (`x = 1` vs `{x = 1}`)
 * `i(` / `a(` - Inside parens / including parens (`arg` vs `(arg)`)

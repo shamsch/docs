@@ -1,35 +1,97 @@
-# Poety 101 (and some Python version management) 
+# Python Dependency & Version Management Guide
 
-Managing Python dependencies and virtual environments can be a pain. However, managing dependencies can be a bit more complicated. This is where **Poetry** comes in.
+## Core Tools Specialization
+* **Poetry**: Dependency management + virtual environments 
+* **pyenv**: Python version installation/switching
 
-## Pyenv
+## Tool Responsibilities
 
-Pyenv is another tool that can help manage Python versions and virtual environments. Preferably install with **Homebrew**.
+### Poetry Essentials
 
-### Common Commands 
+#### Installation & Setup
+```bash
+# Install Poetry
+curl -sSL https://install.python-poetry.org | python3 -
 
--   Check what version of python you have installed
-    `pyenv versions`
+# New project 
+poetry new my-project
 
--   This is how you install a new version of python
-    `pyenv install 3.11.0`
+# Existing project
+poetry init
+```
 
--   This is a way to create a new virtual environment
-    `pyenv virtualenv 3.11.0 project-name`
+#### Key Commands
+```bash
+poetry add pandas         # Add package
+poetry add -D pytest     # Add dev dependency 
+poetry install          # Install all deps
+poetry remove pandas    # Remove package
+poetry run python ...   # Execute in venv
+poetry shell           # Activate venv
+```
 
--   Then navigate to the project folder
-    `cd your-project`
+#### Project Configuration (`pyproject.toml`)
+```toml
+[tool.poetry]
+name = "my-project"
+version = "0.1.0"
+description = ""
+authors = ["You <you@example.com>"]
 
--   This will activate the virtual environment within the directory of your project
-    `pyenv local project-name`
+[tool.poetry.dependencies]
+python = "^3.9"         # Min Python version
+pandas = "^2.0.2"
 
--   To check all your environments
-    `pyenv virtualenvs`
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+```
 
--  To delete an environment
-    `pyenv uninstall project-name`
+#### Virtual Environment Management
+```bash
+poetry env info     # Show venv details
+poetry env list     # List project venvs
+poetry env use 3.11 # Specify Python version
+```
 
--  To check which python environment you are using
-    `pyenv which python`
+### pyenv Essentials
 
-More information on their [repository](https://github.com/pyenv/pyenv) on GitHub. 
+#### Python Version Management
+```bash
+# List available versions
+pyenv install --list
+
+# Install specific version
+pyenv install 3.11.4
+
+# Set global version
+pyenv global 3.11.4
+
+# Set project-specific version (creates .python-version)
+cd my-project
+pyenv local 3.11.4
+```
+
+### Combined Workflow
+
+1. Install Python version with pyenv:
+```bash
+pyenv install 3.11.4
+pyenv global 3.11.4
+```
+
+2. Create Poetry project with specific Python:
+```bash
+poetry init    # Will use pyenv's 3.11.4
+```
+
+3. Verify environment:
+```bash
+poetry run python --version    # Python 3.11.4
+```
+
+4. Install dependencies:
+```bash
+poetry add numpy    # Installed in isolated venv
+```
+
+Key integration: Poetry automatically detects pyenv's Python versions and uses them when creating virtual environments. The `python` version constraint in `pyproject.toml` ensures compatibility across environments.
