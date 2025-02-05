@@ -11,7 +11,7 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 ```
 Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my keyboard settings, but that not really limited to vim but rather system wide.
 
-## Basic Movement
+### Basic Movement
 
 -   `h` - Move cursor left
 -   `j` - Move cursor down
@@ -33,7 +33,7 @@ Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my key
 -   `b` - Move to beginning of current/previous word
 -   `e` - Move to end of word
 
-## Other navigational commands
+### Other navigational commands
 
 -   `Ctrl + o` - Jump back to previous location
 -   `Ctrl + i` - Jump forward to next location
