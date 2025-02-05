@@ -81,6 +81,11 @@ For example:
 * `yi"` copies inside `"Hello"` → `Hello`
 * `va{` selects `{x = 1}` including braces
 
+### Change case
+-  `~` - Change case of character under cursor
+-  `g~w` - Change case of word
+
+
 ### Undo/Redo
 
 -   `u` - Undo last change
