@@ -11,7 +11,7 @@ However, in VSCode, I like to make a few changes. Paste these to your settings.j
 ```
 Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my keyboard settings, but that not really limited to vim but rather system wide.
 
-### Basic Movement
+## Basic Movement
 
 -   `h` - Move cursor left
 -   `j` - Move cursor down
@@ -40,7 +40,7 @@ Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my key
 -   `Ctrl + u` - Move half page up
 -   `Ctrl + d` - Move half page down
 
-## Search and Replace
+### Search and Replace
 
 -   `/` - Start search
 -   `*` - Search for word under cursor
@@ -49,7 +49,6 @@ Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my key
 -   `gd` - Go to definition 
 -   `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
 
-## Editing
 
 ### Insert Mode
 
@@ -67,6 +66,7 @@ Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my key
 -   `p` - Paste after cursor
 
 ### Nifty tricks
+
 Text operations (use `c` to change, `d` to delete, `y` to copy, `v` to select):
 * `iw` / `aw` - Inside word / including whitespace around word (`Hello` vs `|Hello`)
 * `i"` / `a"` - Inside quotes / including quotes (`Hello` vs `"Hello"`)
@@ -85,29 +85,28 @@ For example:
 -  `~` - Change case of character under cursor
 -  `g~w` - Change case of word
 
-
 ### Undo/Redo
 
 -   `u` - Undo last change
 -   `Ctrl + r` - Redo last undone change
 
-## Visual Mode
+### Visual Mode
 
 -   `V` - Select current line
 -   `ggVG` - Select entire file
 -   `>>` - Indent selected text
 -   `<<` - Unindent selected text
 
-## Window Management
+### Window Management
 
 -   `:sp` - Split window horizontally
 -   `:vsp` - Split window vertically
 
-## Exiting
+### Exiting
 
 -   `:x` - Save and quit
 -   `:q!` - Quit without saving
 
-## Mode Switching
+### Mode Switching
 
 -   `Esc` - Return to normal mode (from visual or insert mode)
