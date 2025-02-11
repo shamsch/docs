@@ -1,73 +1,95 @@
-# Vim Motion I know and use
+# Essential Vim Commands for Everyday Use
 
-All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
-
-However, in VSCode, I like to make a few changes. Paste these to your settings.json file:
+These commands work in any Vim environment (terminal, VS Code, etc.).  My VS Code settings:
 
 ```json
-    	// Vim settings
-	"vim.hlsearch": true, // Highlights search results
-	"vim.incsearch": true // Shows result as you search 
+{
+    "vim.hlsearch": true,
+    "vim.incsearch": true
+}
 ```
-Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my keyboard settings, but that not really limited to vim but rather system wide.
 
-### Basic Movement
+> I also remap Caps Lock and Esc, but that's a system-wide setting.)
 
--   `h` - Move cursor left
--   `j` - Move cursor down
--   `k` - Move cursor up
--   `l` - Move cursor right
--   `]` or `[` - Move over paragraph (next new line without text)
--   `(` or `)` - Move over sentence 
+## Basic Navigation
 
-### Line Navigation
+### Character Movement
 
--   `^` - Jump to beginning of line
--   `$` - Jump to end of line
--   `gg` - Jump to beginning of file
--   `G` - Jump to end of file
+* `h` - Move cursor left
+* `j` - Move cursor down
+* `k` - Move cursor up
+* `l` - Move cursor right
 
-### Word Navigation
+### Word Movement
 
--   `w` - Move to start of next word
--   `b` - Move to beginning of current/previous word
--   `e` - Move to end of word
+* `w` - Move to start of next word
+* `b` - Move to beginning of current/previous word
+* `e` - Move to end of word
 
-### Other navigational commands
+### Line/File Movement
 
--   `Ctrl + o` - Jump back to previous location
--   `Ctrl + i` - Jump forward to next location
--   `Ctrl + u` - Move half page up
--   `Ctrl + d` - Move half page down
+* `^` - Jump to beginning of line
+* `$` - Jump to end of line
+* `gg` - Jump to beginning of file
+* `G` - Jump to end of file
 
-### Search and Replace
+### Paragraph/Sentence Movement
 
--   `/` - Start search
--   `*` - Search for word under cursor
--   `n` - Next search result
--   `N` - Previous search result
--   `gd` - Go to definition 
--   `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
+* `]` or `[` - Move over paragraph (next newline without text)
+* `(` or `)` - Move over sentence
 
+### Other Navigation
+
+* `Ctrl + o` - Jump back to previous location
+* `Ctrl + i` - Jump forward to next location
+* `Ctrl + u` - Move half page up
+* `Ctrl + d` - Move half page down
+
+## Editing Commands
 
 ### Insert Mode
 
--   `i` - Insert before cursor
--   `a` - Insert after cursor
--   `o` - Insert on new line below
+* `i` - Insert before cursor
+* `a` - Insert after cursor
+* `o` - Insert on new line below
 
-### Delete and Modify
+### Delete/Change/Yank (Copy)
 
--   `x` - Delete character under cursor
--   `dw` - Delete wrod
--   `dd` - Delete entire line
--   `yw` - Copy word
--   `yy` - Copy entire line
--   `p` - Paste after cursor
+* `x` - Delete character under cursor
+* `dw` - Delete word
+* `dd` - Delete entire line
+* `yw` - Copy word
+* `yy` - Copy entire line
+* `p` - Paste after cursor
 
-### Nifty tricks
+### Change Case
 
-Text operations (use c to change/cut, d to delete, y to copy, v to select):
+* `~` - Change case of character under cursor
+* `g~w` - Change case of word
+
+## Search and Replace
+
+* `/` - Start search
+* `*` - Search for word under cursor
+* `n` - Next search result
+* `N` - Previous search result
+* `gd` - Go to definition
+* `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
+
+## Visual Mode
+
+* `v` - Select character-wise
+* `V` - Select line-wise
+* `Ctrl-v` - Select block-wise
+* `ggVG` - Select entire file
+* `>>` - Indent selected text
+* `<<` - Unindent selected text
+
+## Text Objects and Till Commands
+
+These commands work in conjunction with `c` (change), `d` (delete), `y` (copy), and `v` (select).
+
+### Text Objects
 
 * `iw` / `aw` - Inside word / including whitespace around word (`Hello` vs `|Hello`)
 * `i"` / `a"` - Inside quotes / including quotes (`Hello` vs `"Hello"`)
@@ -76,12 +98,14 @@ Text operations (use c to change/cut, d to delete, y to copy, v to select):
 * `it` / `at` - Inside tags / including tags (`text` vs `<div>text</div>`)
 * `ip` / `ap` - Inside paragraph / including surrounding newlines
 
+### Till Commands
+
 * `t"` - Till double quote (`"Hello"` → `|Hello"`). Moves cursor before the next `"`
 * `t}` - Till closing curly brace (`{x = 1}` → `{x = 1|}`). Moves cursor before the next `}`
 * `t)` - Till closing parenthesis (`(arg)` → `(arg|)`. Moves cursor before the next `)`
 * `t;` - Till semicolon (`int x = 10;` → `int x = 10|;`). Moves cursor before the next `;`
 
-For example:
+**Examples:**
 
 * `cit` changes between `<div>text</div>` tags → `<div>|</div>`
 * `dap` deletes paragraph including blank lines
@@ -91,32 +115,21 @@ For example:
 * `yt)` copies `arg` from `(arg)`
 * `vt;` visually selects up to (but not including) the next semicolon.
 
-### Change case
--  `~` - Change case of character under cursor
--  `g~w` - Change case of word
+## Undo/Redo
 
-### Undo/Redo
+* `u` - Undo last change
+* `Ctrl + r` - Redo last undone change
 
--   `u` - Undo last change
--   `Ctrl + r` - Redo last undone change
+## Window Management
 
-### Visual Mode
+* `:sp` - Split window horizontally
+* `:vsp` - Split window vertically
 
--   `V` - Select current line
--   `ggVG` - Select entire file
--   `>>` - Indent selected text
--   `<<` - Unindent selected text
+## Exiting
 
-### Window Management
+* `:x` - Save and quit
+* `:q!` - Quit without saving
 
--   `:sp` - Split window horizontally
--   `:vsp` - Split window vertically
+## Mode Switching
 
-### Exiting
-
--   `:x` - Save and quit
--   `:q!` - Quit without saving
-
-### Mode Switching
-
--   `Esc` - Return to normal mode (from visual or insert mode)
+* `Esc` - Return to normal mode
