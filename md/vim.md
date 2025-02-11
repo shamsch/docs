@@ -35,7 +35,7 @@ These commands work in any Vim environment (terminal, VS Code, etc.).  My VS Cod
 
 ### Paragraph/Sentence Movement
 
-* `]` or `[` - Move over paragraph (next newline without text)
+* `]` or `[` - Move over paragraph
 * `(` or `)` - Move over sentence
 
 ### Other Navigation
