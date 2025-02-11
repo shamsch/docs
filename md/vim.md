@@ -1,6 +1,8 @@
-# Essential Vim Commands for Everyday Use
+# VIM motions I actually know and use
 
-These commands work in any Vim environment (terminal, VS Code, etc.).  My VS Code settings:
+All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
+
+However, in VSCode, I like to make a few changes. Paste these to your `settings.json` file:
 
 ```json
 {
