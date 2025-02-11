@@ -67,7 +67,8 @@ Beside these, I just map `Esc` to `caps lock` and `caps lock` to `Esc` in my key
 
 ### Nifty tricks
 
-Text operations (use `c` to change, `d` to delete, `y` to copy, `v` to select):
+Text operations (use c to change/cut, d to delete, y to copy, v to select):
+
 * `iw` / `aw` - Inside word / including whitespace around word (`Hello` vs `|Hello`)
 * `i"` / `a"` - Inside quotes / including quotes (`Hello` vs `"Hello"`)
 * `i{` / `a{` - Inside braces / including braces (`x = 1` vs `{x = 1}`)
@@ -75,11 +76,20 @@ Text operations (use `c` to change, `d` to delete, `y` to copy, `v` to select):
 * `it` / `at` - Inside tags / including tags (`text` vs `<div>text</div>`)
 * `ip` / `ap` - Inside paragraph / including surrounding newlines
 
+* `t"` - Till double quote (`"Hello"` → `|Hello"`). Moves cursor before the next `"`
+* `t}` - Till closing curly brace (`{x = 1}` → `{x = 1|}`). Moves cursor before the next `}`
+* `t)` - Till closing parenthesis (`(arg)` → `(arg|)`. Moves cursor before the next `)`
+* `t;` - Till semicolon (`int x = 10;` → `int x = 10|;`). Moves cursor before the next `;`
+
 For example:
+
 * `cit` changes between `<div>text</div>` tags → `<div>|</div>`
 * `dap` deletes paragraph including blank lines
 * `yi"` copies inside `"Hello"` → `Hello`
 * `va{` selects `{x = 1}` including braces
+* `ct"` changes `"Hello"` to `"|"`
+* `yt)` copies `arg` from `(arg)`
+* `vt;` visually selects up to (but not including) the next semicolon.
 
 ### Change case
 -  `~` - Change case of character under cursor
