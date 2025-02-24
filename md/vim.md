@@ -63,6 +63,8 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
 * `yw` - Copy word
 * `yy` - Copy entire line
 * `p` - Paste after cursor
+* `"+y` or `"*y` - Copy to system
+* `"+p` or `"*p` - Copy to system 
 
 ### Change Case
 
