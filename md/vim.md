@@ -32,6 +32,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
 
 * `^` - Jump to beginning of line
 * `$` - Jump to end of line
+* `g_` - Jump to end of line without going to next line
 * `gg` - Jump to beginning of file
 * `G` - Jump to end of file
 
