@@ -6,11 +6,12 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
   "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.handleKeys": {
-    "<C-c>": false,
-    "<C-v>": false,
-    "<C-x>": false,
-    "<C-z>": false,
-    "<C-f>": false
+    "<C-c>": false, //copy 
+    "<C-v>": false, //paste
+    "<C-x>": false, // cut
+    "<C-z>": false, // undo
+    "<C-p>": false, // files
+    ""<C-f>": false, // find
   }
 }
 ```
