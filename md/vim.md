@@ -51,8 +51,10 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
 * `yw` - Copy word
 * `yy` - Copy entire line
 * `p` - Paste after cursor
-* *`"+y`* or *`"y` - Copy to system
-* *`"+p`* or *`"p` - Copy to system 
+* `"+y` - Copy to system clipboard (works on all platforms)
+* `"+p` - Paste from system clipboard (works on all platforms)
+* `"*y` - Copy to selection clipboard (primarily Linux)
+* `"*p` - Paste from selection clipboard (primarily Linux)
 ### Change Case
 * `~` - Change case of character under cursor
 * `g~w` - Change case of word
