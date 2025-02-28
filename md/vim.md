@@ -12,6 +12,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     "<C-z>": false, // undo
     "<C-p>": false, // files
     "<C-f>": false, // find
+    "<C-a>": false, // select all
   }
 }
 ```
