@@ -11,7 +11,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     "<C-x>": false, // cut
     "<C-z>": false, // undo
     "<C-p>": false, // files
-    ""<C-f>": false, // find
+    "<C-f>": false, // find
   }
 }
 ```
