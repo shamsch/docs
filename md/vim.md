@@ -5,6 +5,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
 {
   "vim.hlsearch": true,
   "vim.incsearch": true,
+  // on windows only
   "vim.handleKeys": {
     "<C-c>": false, //copy 
     "<C-v>": false, //paste
@@ -66,6 +67,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
 * `n` - Next search result
 * `N` - Previous search result
 * `gd` - Go to definition
+* `gf` - Go to file
 * `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
 ## Visual Mode
 * `v` - Select character-wise
