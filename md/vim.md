@@ -89,6 +89,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
 ### Undo/Redo
 * `u` - Undo last change
 * `Ctrl + r` - Redo last undone change
+* `.` - To repeat last command
 
 ## Text Objects and Operators
 
