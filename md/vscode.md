@@ -121,6 +121,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   "vim.leader": "<space>", // leader key
   // because $ and g_ is difficult to reach for start and end of line
+  // similarly * is used for word search and difficult to reach
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "h"],
@@ -129,7 +130,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     {
       "before": ["<leader>", "l"],
       "after": ["g", "_"]
-    }
+    },
+	{
+	  "before": ["<leader>", "f"],
+	  "after": ["*"]
+	},
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -139,7 +144,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     {
       "before": ["<leader>", "l"],
       "after": ["g", "_"]
-    }
+    },
+	{
+	  "before": ["<leader>", "f"],
+	  "after": ["*"]
+	}
   ],
   // highlight yanked text
   "vim.highlightedyank.enable": true,
