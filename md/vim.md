@@ -3,12 +3,11 @@
 All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
 However, in VSCode, I like to make a few changes. Paste these to your `settings.json` file:
 ```json
-{
-  "vim.hlsearch": true,
-  "vim.incsearch": true,
-  // on windows only
+  "vim.incsearch": true, // incremental search - does search as you type
+  "vim.hlsearch": true, // highlight search - stop using :noh
+  "vim.foldfix": true, // prevents fold to unfold when moving with hjkl
   "vim.handleKeys": {
-    "<C-c>": false, //copy 
+    "<C-c>": false, //copy
     "<C-v>": false, //paste
     "<C-x>": false, // cut
     "<C-z>": false, // undo
@@ -16,10 +15,37 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     "<C-f>": false, // find
     "<C-a>": false, // select all
     "<C-q>": false, // navigate
-  }
-}
+  },
+  "vim.leader": "<space>", // leader key
+  // because $ and ^ is difficult to reach
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    }
+  ],
+  // highlight yanked text
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.duration": 250,
+  // relative lines
+  "editor.lineNumbers": "relative",
 ```
-> I also remap Caps Lock and Esc, but that's a system-wide setting.
+> I also remap Caps Lock to Esc, but that's a system-wide setting.
 
 ## Navigation
 
