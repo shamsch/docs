@@ -1,51 +1,7 @@
 # VIM motions I actually know and use
 
 All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
-However, in VSCode, I like to make a few changes. Paste these to your `settings.json` file:
-```json
-  "vim.incsearch": true, // incremental search - does search as you type
-  "vim.hlsearch": true, // highlight search - stop using :noh
-  "vim.foldfix": true, // prevents fold to unfold when moving with hjkl
-  // override for window to not conflict
-  "vim.handleKeys": {
-    "<C-c>": false, //copy
-    "<C-v>": false, //paste
-    "<C-x>": false, // cut
-    "<C-z>": false, // undo
-    "<C-p>": false, // files
-    "<C-f>": false, // find
-    "<C-a>": false, // select all
-    "<C-q>": false, // navigate
-  },
-  "vim.leader": "<space>", // leader key
-  // because $ and g_ is difficult to reach for start and end of line
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "h"],
-      "after": ["^"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "after": ["g", "_"]
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "h"],
-      "after": ["^"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "after": ["g", "_"]
-    }
-  ],
-  // highlight yanked text
-  "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.color": "yellow",
-  "vim.highlightedyank.duration": 250,
-  // relative lines
-  "editor.lineNumbers": "relative",
-```
+However, in VSCode, I like to make a few changes. Find these changes with rest of my vscode settings [here](/template.html?file=vscode.md) 
 > I also remap Caps Lock to Esc, but that's a system-wide setting.
 
 ## Navigation
