@@ -24,7 +24,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | Open terminal | `cmd+backtick` | `ctrl+backtick` |
 | Open new terminal | `cmd+shift+backtick` | `ctrl+shift+backtick` |
 | Move between multiple terminals | `cmd+shift+[` and `cmd+shift+]` | `ctrl+shift+[` and `ctrl+shift+]` |
-
 ### Editor Operations
 | Action | Mac | Windows |
 |--------|-----|---------|
@@ -62,6 +61,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ```json
 {
 	// SELF SET SETTINGS
+
 	// JS and TS settings
 	"javascript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when JavaScript files are moved
 	"typescript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when TypeScript files are moved
@@ -72,20 +72,26 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 	"git.enableSmartCommit": true, // Commit all changes when no files are added/staged for commit
 
 	// Editor settings
-	"editor.defaultFormatter": "esbenp.prettier-vscode", // Sets the default formatter for the editor
 	"editor.fontFamily": "JetBrains Mono", // Sets the editor font family
 	"editor.fontLigatures": true, // Disables font ligatures
 	"editor.fontSize": 16, // Sets the editor font size
+	"editor.suggestSelection": "first", // Automatically selects the first suggestion when pressing Tab
+	"editor.tabCompletion": "on", // Enables tab completion
+	"editor.tabSize": 4, // Sets the tab size to 4 spaces
+	"editor.wordWrap": "on", // Enables word wrap
 	"editor.minimap.enabled": false, // Disables the minimap
+	"editor.bracketPairColorization.enabled": true, // Enables bracket pair colorization
 	"workbench.editor.openSideBySideDirection": "down", // Opens editors side by side in a downward direction
 	"workbench.sideBar.location": "right",
-	"explorer.confirmDelete": false, // Disables delete confirmation in the explorer
 	"files.autoSave": "afterDelay", // Automatically saves files after a delay
 	"diffEditor.ignoreTrimWhitespace": false, // Does not ignore trim whitespace in the diff editor
-	"terminal.integrated.fontFamily": "monospace",
+	"terminal.integrated.fontFamily": "JetBrains Mono", // Sets the terminal font family
 	"workbench.colorTheme": "Visual Studio Dark",
-	"workbench.startupEditor": "none", // Sets the terminal font family:
-
+	"workbench.startupEditor": "none", // Sets the terminal font family
+	"editor.renderWhitespace": "all", // Renders all whitespace characters in the editor with dots and dashes
+	"explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
+	"explorer.confirmDragAndDrop": false,// Disables the confirmation dialog when deleting files 
+	
 	// VIM settings
 	"vim.incsearch": true, // incremental search - does search as you type
 	"vim.hlsearch": true, // highlight search - stop using :noh
@@ -127,17 +133,16 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 	"vim.highlightedyank.enable": true,
 	"vim.highlightedyank.color": "yellow",
 	"vim.highlightedyank.duration": 250,
-	// relative lines
+	// relative lines for easy traversal i.e 10j or 33k
 	"editor.lineNumbers": "relative",
-
+	
 	// OTHER AUTO GENERATED SETTINGS
-	"github.copilot.selectedCompletionModel": "gpt-4o-copilot",
 	"github.copilot.enable": {
 		"*": true,
 		"plaintext": false,
 		"markdown": true,
-		"scminput": false
-	}
+		"scminput": false,
+	},
 }
 ```
 
