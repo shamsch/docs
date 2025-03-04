@@ -41,7 +41,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
   ],
   // highlight yanked text
   "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.color": "yellow",
   "vim.highlightedyank.duration": 250,
   // relative lines
   "editor.lineNumbers": "relative",
