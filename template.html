@@ -1,275 +1,382 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Documentation</title>
-		<!-- GitHub Markdown CSS - Dark variant -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css">
-		<!-- PrismJS for syntax highlighting - Dark theme -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-		<!-- Custom styles -->
-		<style>
-			body {
-				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-				line-height: 1.6;
-				color: #e6edf3;
-				background-color: #0d1117;
-				max-width: 900px;
-				margin: 0 auto;
-				padding: 2rem;
-			}
-			.markdown-body {
-				padding: 20px 0;
-				background-color: #0d1117;
-				color: #e6edf3;
-			}
-			nav {
-				margin-bottom: 20px;
-			}
-			footer {
-				margin-top: 2rem;
-				padding-top: 1rem;
-				border-top: 1px solid #30363d;
-				color: #8b949e;
-			}
-			a {
-				color: #58a6ff;
-				text-decoration: none;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-			/* Copy button styles */
-			.code-wrapper {
-				position: relative;
-			}
-			.copy-button {
-				position: absolute;
-				top: 5px;
-				right: 5px;
-				padding: 3px 8px;
-				font-size: 12px;
-				background-color: #161b22;
-				color: #c9d1d9;
-				border: 1px solid #30363d;
-				border-radius: 3px;
-				cursor: pointer;
-				opacity: 0.7;
-				transition: opacity 0.2s;
-			}
-			.copy-button:hover {
-				opacity: 1;
-				background-color: #1f2937;
-			}
-			pre {
-				background-color: #161b22 !important;
-				border: 1px solid #30363d !important;
-			}
-			code {
-				color: #c9d1d9;
-			}
-			::-webkit-scrollbar {
-				width: 10px;
-				height: 10px;
-			}
-			::-webkit-scrollbar-track {
-				background: #0d1117;
-			}
-			::-webkit-scrollbar-thumb {
-				background: #30363d;
-				border-radius: 5px;
-			}
-			::-webkit-scrollbar-thumb:hover {
-				background: #8b949e;
-				background: #8b949e;
-			}
-			.metadata {
-				color: #8b949e;
-				font-size: 0.9rem;
-				margin-bottom: 1.5rem;
-				padding-bottom: 0.5rem;
-				border-bottom: 1px solid #30363d;
-			}
-			
-			.last-updated {
-				display: inline-block;
-				margin-left: 10px;
-			}
-			
-			.metadata span {
-				color: #58a6ff;
-			}
-		</style>
-		<link rel="icon" href="favicon.png" type="image/png" />
-	</head>
-	<body>
-		<nav>
-			<a href="index.html">← Back to index</a>
-		</nav>
-		
-		<div id="content" class="markdown-body">
-			Loading...
-		</div>
+  <head>
+    <title>Documentation</title>
+    <!-- GitHub Markdown CSS - Dark variant -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css"
+    />
+    <!-- PrismJS for syntax highlighting - Dark theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <!-- Custom styles -->
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+        line-height: 1.6;
+        color: #e6edf3;
+        background-color: #0d1117;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .markdown-body {
+        padding: 20px 0;
+        background-color: #0d1117;
+        color: #e6edf3;
+      }
+      nav {
+        margin-bottom: 20px;
+      }
+      footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #30363d;
+        color: #8b949e;
+      }
+      a {
+        color: #58a6ff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* Copy button styles */
+      .code-wrapper {
+        position: relative;
+      }
+      .copy-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding: 3px 8px;
+        font-size: 12px;
+        background-color: #161b22;
+        color: #c9d1d9;
+        border: 1px solid #30363d;
+        border-radius: 3px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+      .copy-button:hover {
+        opacity: 1;
+        background-color: #1f2937;
+      }
+      pre {
+        background-color: #161b22 !important;
+        border: 1px solid #30363d !important;
+      }
+      code {
+        color: #c9d1d9;
+      }
+      .metadata {
+        color: #8b949e;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #30363d;
+      }
 
-		<footer>
-							✍️ written by <a href="https://www.linkedin.com/in/shamsurchowdhury/">Shamsur </a> for future Shamsur 🐸
-		</footer>
+      .last-updated {
+        display: inline-block;
+        margin-left: 10px;
+      }
 
-		<!-- PrismJS for code highlighting -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
-		<!-- Marked.js for Markdown parsing -->
-		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-		
-		<script>
-			// Get the filename from URL parameters
-			const urlParams = new URLSearchParams(window.location.search);
-			const filename = urlParams.get('file');
-			
-			if (!filename) {
-				document.getElementById('content').innerHTML = '<p>No file specified</p>';
-			} else {
-					// Format filename for title: replace dashes with spaces, capitalize words, remove .md
-					const formattedTitle = filename.replace('.md', '')
-						.replace(/-/g, ' ')
-						.replace(/_/g, ' ')
-						.split(' ')
-						.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-						.join(' ');
-					
-					// Update the title with clean formatting
-					document.title = formattedTitle;
-					
-					// GitHub repo details
-					const GITHUB_USER = "shamsch";
-					const REPO_NAME = "docs";
-					const DOCS_PATH = "md";
-					
-					// Fetch the markdown file
-					fetch(`https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/main/${DOCS_PATH}/${filename}`)
-						.then(response => {
-							if (!response.ok) {
-								throw new Error('File not found');
-							}
-							return response.text();
-						})
-						.then(markdown => {
-							// Add heading with the title at the top of content
-							const metadataDiv = `<div class="metadata">Loading last updated date...</div>`;
-							
-							// Render markdown content
-							document.getElementById('content').innerHTML = metadataDiv + marked.parse(markdown);
-							
-							// Fetch last commit info for this file
-							fetchLastCommitDate(filename);
-							
-							// Apply syntax highlighting to code blocks
-							Prism.highlightAll();
-							
-							// Add copy buttons to code blocks
-							addCopyButtons();
-						})
-						.catch(error => {
-							document.getElementById('content').innerHTML = `<p>Error loading file: ${error.message}</p>`;
-						});
-				}
+      .metadata span {
+        color: #58a6ff;
+      }
 
-			// Function to fetch the last commit date for the file
-			function fetchLastCommitDate(filename) {
-				const GITHUB_USER = "shamsch";
-				const REPO_NAME = "docs";
-				const DOCS_PATH = "md";
-				
-				fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO_NAME}/commits?path=${DOCS_PATH}/${filename}&per_page=1`)
-					.then(response => {
-						if (!response.ok) {
-							throw new Error('Failed to fetch commit history');
-						}
-						return response.json();
-					})
-					.then(commits => {
-						if (commits && commits.length > 0) {
-							const lastCommit = commits[0];
-							const lastEditDate = new Date(lastCommit.commit.committer.date);
-							const formattedDate = formatDate(lastEditDate);
-							
-							// Update the metadata div with last edited info
-							const metadataDiv = document.querySelector('.metadata');
-							if (metadataDiv) {
-								metadataDiv.innerHTML = `Last updated on <span>${formattedDate}</span> `;
-							}
-						} else {
-							const metadataDiv = document.querySelector('.metadata');
-							if (metadataDiv) {
-								metadataDiv.textContent = 'No commit history found';
-							}
-						}
-					})
-					.catch(error => {
-						console.error('Error fetching commit history:', error);
-						const metadataDiv = document.querySelector('.metadata');
-						if (metadataDiv) {
-							metadataDiv.textContent = 'Error fetching last updated date';
-						}
-					});
-			}
-			
-			// Function to format date in a nice readable way
-			function formatDate(dateObj) {
-				const options = { 
-					year: 'numeric', 
-					month: 'long', 
-					day: 'numeric',
-					hour: '2-digit',
-					minute: '2-digit'
-				};
-				return dateObj.toLocaleDateString(undefined, options);
-			}
+      /* Header linking styles */
+      .header-link {
+        opacity: 0;
+        font-size: 0.85em;
+        padding-left: 0.2em;
+        color: #58a6ff;
+        transition: opacity 0.2s;
+      }
 
-			// Function to add copy buttons to all code blocks
-			function addCopyButtons() {
-				const codeBlocks = document.querySelectorAll('pre code');
-				
-				codeBlocks.forEach(codeBlock => {
-					// Create wrapper for code block for positioning
-					const wrapper = document.createElement('div');
-					wrapper.className = 'code-wrapper';
-					
-					// Get the parent pre element and replace it with our wrapper
-					const pre = codeBlock.parentNode;
-					pre.parentNode.insertBefore(wrapper, pre);
-					wrapper.appendChild(pre);
-					
-					// Create copy button
-					const copyButton = document.createElement('button');
-					copyButton.className = 'copy-button';
-					copyButton.textContent = 'Copy';
-					
-					// Add click event to copy code
-					copyButton.addEventListener('click', () => {
-						const code = codeBlock.textContent;
-						navigator.clipboard.writeText(code).then(() => {
-							// Visual feedback
-							copyButton.textContent = 'Copied!';
-							setTimeout(() => {
-								copyButton.textContent = 'Copy';
-							}, 2000);
-						}).catch(err => {
-							console.error('Failed to copy: ', err);
-							copyButton.textContent = 'Error!';
-							setTimeout(() => {
-								copyButton.textContent = 'Copy';
-							}, 2000);
-						});
-					});
-					
-					// Add the button to the wrapper
-					wrapper.appendChild(copyButton);
-				});
-			}
-		</script>
-	</body>
+      h1:hover .header-link,
+      h2:hover .header-link,
+      h3:hover .header-link,
+      h4:hover .header-link,
+      h5:hover .header-link,
+      h6:hover .header-link {
+        opacity: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        scroll-margin-top: 20px;
+      }
+    </style>
+    <link rel="icon" href="favicon.png" type="image/png" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">← Back to index</a>
+    </nav>
+
+    <div id="content" class="markdown-body">Loading...</div>
+
+    <footer>
+      ✍️ written by
+      <a href="https://www.linkedin.com/in/shamsurchowdhury/">Shamsur </a> for
+      future Shamsur 🐸
+    </footer>
+
+    <!-- PrismJS for code highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+      // Get the filename from URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const filename = urlParams.get("file");
+
+      if (!filename) {
+        document.getElementById("content").innerHTML =
+          "<p>No file specified</p>";
+      } else {
+        // Format filename for title: replace dashes with spaces, capitalize words, remove .md
+        const formattedTitle = filename
+          .replace(".md", "")
+          .replace(/-/g, " ")
+          .replace(/_/g, " ")
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+
+        // Update the title with clean formatting
+        document.title = formattedTitle;
+
+        // GitHub repo details
+        const GITHUB_USER = "shamsch";
+        const REPO_NAME = "docs";
+        const DOCS_PATH = "md";
+
+        // Fetch the markdown file
+        fetch(
+          `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/main/${DOCS_PATH}/${filename}`
+        )
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("File not found");
+            }
+            return response.text();
+          })
+          .then((markdown) => {
+            // Add heading with the title at the top of content
+            const metadataDiv = `<div class="metadata">Loading last updated date...</div>`;
+
+            // Render markdown content
+            document.getElementById("content").innerHTML =
+              metadataDiv + marked.parse(markdown);
+
+            // Make headers linkable
+            makeHeadersLinkable();
+
+            // Fetch last commit info for this file
+            fetchLastCommitDate(filename);
+
+            // Apply syntax highlighting to code blocks
+            Prism.highlightAll();
+
+            // Add copy buttons to code blocks
+            addCopyButtons();
+
+            // Check for hash in URL and scroll to it
+            if (window.location.hash) {
+              const targetElement = document.getElementById(
+                window.location.hash.substring(1)
+              );
+              if (targetElement) {
+                setTimeout(() => {
+                  targetElement.scrollIntoView();
+                }, 100);
+              }
+            }
+          })
+          .catch((error) => {
+            document.getElementById(
+              "content"
+            ).innerHTML = `<p>Error loading file: ${error.message}</p>`;
+          });
+      }
+
+      // Function to fetch the last commit date for the file
+      function fetchLastCommitDate(filename) {
+        const GITHUB_USER = "shamsch";
+        const REPO_NAME = "docs";
+        const DOCS_PATH = "md";
+
+        fetch(
+          `https://api.github.com/repos/${GITHUB_USER}/${REPO_NAME}/commits?path=${DOCS_PATH}/${filename}&per_page=1`
+        )
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to fetch commit history");
+            }
+            return response.json();
+          })
+          .then((commits) => {
+            if (commits && commits.length > 0) {
+              const lastCommit = commits[0];
+              const lastEditDate = new Date(lastCommit.commit.committer.date);
+              const formattedDate = formatDate(lastEditDate);
+
+              // Update the metadata div with last edited info
+              const metadataDiv = document.querySelector(".metadata");
+              if (metadataDiv) {
+                metadataDiv.innerHTML = `Last updated on <span>${formattedDate}</span> `;
+              }
+            } else {
+              const metadataDiv = document.querySelector(".metadata");
+              if (metadataDiv) {
+                metadataDiv.textContent = "No commit history found";
+              }
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching commit history:", error);
+            const metadataDiv = document.querySelector(".metadata");
+            if (metadataDiv) {
+              metadataDiv.textContent = "Error fetching last updated date";
+            }
+          });
+      }
+
+      // Function to format date in a nice readable way
+      function formatDate(dateObj) {
+        const options = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        };
+        return dateObj.toLocaleDateString(undefined, options);
+      }
+
+      // Function to add copy buttons to all code blocks
+      function addCopyButtons() {
+        const codeBlocks = document.querySelectorAll("pre code");
+
+        codeBlocks.forEach((codeBlock) => {
+          // Create wrapper for code block for positioning
+          const wrapper = document.createElement("div");
+          wrapper.className = "code-wrapper";
+
+          // Get the parent pre element and replace it with our wrapper
+          const pre = codeBlock.parentNode;
+          pre.parentNode.insertBefore(wrapper, pre);
+          wrapper.appendChild(pre);
+
+          // Create copy button
+          const copyButton = document.createElement("button");
+          copyButton.className = "copy-button";
+          copyButton.textContent = "Copy";
+
+          // Add click event to copy code
+          copyButton.addEventListener("click", () => {
+            const code = codeBlock.textContent;
+            navigator.clipboard
+              .writeText(code)
+              .then(() => {
+                // Visual feedback
+                copyButton.textContent = "Copied!";
+                setTimeout(() => {
+                  copyButton.textContent = "Copy";
+                }, 2000);
+              })
+              .catch((err) => {
+                console.error("Failed to copy: ", err);
+                copyButton.textContent = "Error!";
+                setTimeout(() => {
+                  copyButton.textContent = "Copy";
+                }, 2000);
+              });
+          });
+
+          // Add the button to the wrapper
+          wrapper.appendChild(copyButton);
+        });
+      }
+
+      // Function to convert header text to GitHub-style IDs
+      function slugify(text) {
+        return text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, "") // Remove non-word characters except spaces and hyphens
+          .replace(/\s+/g, "-") // Replace spaces with hyphens
+          .replace(/-+/g, "-") // Replace multiple hyphens with a single hyphen
+          .trim();
+      }
+
+      // Function to make headers linkable
+      function makeHeadersLinkable() {
+        const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        const usedIds = {};
+
+        headers.forEach((header) => {
+          // Create a slug from the header text
+          let slug = slugify(header.textContent);
+
+          // Handle duplicates by appending a number
+          if (usedIds[slug]) {
+            usedIds[slug]++;
+            slug = `${slug}-${usedIds[slug]}`;
+          } else {
+            usedIds[slug] = 1;
+          }
+
+          // Set the ID on the header
+          header.id = slug;
+
+          // Create link element
+          const link = document.createElement("a");
+          link.className = "header-link";
+          link.href = `?file=${filename}#${slug}`;
+          link.innerHTML = "#";
+          link.title = "Copy link to this section";
+
+          // Add click handler to copy link to clipboard
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const url =
+              window.location.origin +
+              window.location.pathname +
+              `?file=${filename}#${slug}`;
+            navigator.clipboard.writeText(url).then(() => {
+              const originalText = link.innerHTML;
+              link.innerHTML = "✓";
+              setTimeout(() => {
+                link.innerHTML = originalText;
+              }, 2000);
+            });
+
+            // Update URL without refreshing page
+            history.pushState(null, null, `?file=${filename}#${slug}`);
+          });
+
+          // Add the link to the header
+          header.appendChild(link);
+        });
+      }
+    </script>
+  </body>
 </html>
