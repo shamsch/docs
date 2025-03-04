@@ -46,7 +46,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | Find across all files | `cmd+shift+f` | `ctrl+shift+f` |
 | Find in files | `cmd+f` | `ctrl+f` |
 | Toggle replace | `cmd+option+f` | `ctrl+h` |
-| Go up and down search results | `cmd`+`down` |`ctrl`+`down`|
+| Go up and down search results | `cmd+down` and then `down` |`ctrl+down` and then `down`|
 | Replace one | `cmd+Enter` | `Enter` |
 | Replace all | `cmd+Alt+Enter` | `Alt+Enter` |
 | Comment out line | `cmd+/` | `ctrl+/` |
