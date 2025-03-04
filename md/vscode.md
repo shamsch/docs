@@ -15,6 +15,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | Focus editor | `cmd+1` | `ctrl+1` |
 | Toggle sidebar | `control+q` | `ctrl+q` |
 | Move directly to explorer/ or back to editor | `cmd+shift+e` | `ctrl+shift+e` |
+| Create a new editor group | `cmd+\` | `ctrl+\` |
 | Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |
 | Go between active files in editor | `control+tab` | `ctrl+tab` |
 
