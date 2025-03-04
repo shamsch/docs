@@ -32,6 +32,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | Set multiple cursors | `option+click` | `alt+click` |
 | Close active editor | `cmd+w` | `` |
 | Close all editors | `` | `` |
+| Select current word and subsequent words | `cmd+d` | `` |
 
 ### File Operations
 | Action | Mac | Windows |
