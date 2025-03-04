@@ -18,7 +18,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     "<C-q>": false, // navigate
   },
   "vim.leader": "<space>", // leader key
-  // because $ and ^ is difficult to reach
+  // because $ and g_ is difficult to reach for start and end of line
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "h"],
@@ -26,7 +26,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     },
     {
       "before": ["<leader>", "l"],
-      "after": ["$"]
+      "after": ["g", "_"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -36,7 +36,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     },
     {
       "before": ["<leader>", "l"],
-      "after": ["$"]
+      "after": ["g", "_"]
     }
   ],
   // highlight yanked text
