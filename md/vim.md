@@ -15,6 +15,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
     "<C-p>": false, // files
     "<C-f>": false, // find
     "<C-a>": false, // select all
+    "<C-q>": false, // navigate
   }
 }
 ```
