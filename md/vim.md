@@ -71,6 +71,8 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 - `yw` - Copy word
 - `yy` - Copy entire line
 - `p` - Paste after cursor
+- `:reg` - Show yank registers aka clipboard
+- `"0p` - Paste from yank register 0
 
 ### Clipboard Operations
 
