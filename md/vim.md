@@ -1,7 +1,7 @@
 # VIM motions I actually know and use
 
 All of the following commands will work by default in any vim environment. I use them in VSCode primarly with occasional use in the terminal.
-However, in VSCode, I like to make a few changes. Find these changes with rest of my vscode settings [here](/template.html?file=vscode.md) 
+However, in VSCode, I like to make a few changes. Find these changes with rest of my vscode settings [here](/template.html?file=vscode.md#settings). 
 > I also remap Caps Lock to Esc, but that's a system-wide setting.
 
 ## Navigation
