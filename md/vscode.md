@@ -61,15 +61,15 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ```json
 {
 	// SELF SET SETTINGS
-
+	
 	// JS and TS settings
 	"javascript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when JavaScript files are moved
 	"typescript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when TypeScript files are moved
-
+	
 	// Git settings
 	"git.autofetch": true, // Automatically fetches changes from the remote repository
-	"git.confirmSync": false, // Disables confirmation dialog for Git sync
 	"git.enableSmartCommit": true, // Commit all changes when no files are added/staged for commit
+	"git.confirmSync": false, // Does not ask for confirmation before syncing changes
 
 	// Editor settings
 	"editor.fontFamily": "JetBrains Mono", // Sets the editor font family
