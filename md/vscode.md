@@ -6,22 +6,23 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ### Command Navigation
 | Action | Mac | Windows |
 |--------|-----|---------|
-| Open command palette | `cmd+shift+p` | `cntrl+shift+p` |
-| Quick file navigation | `cmd+p` | `cntrl+p` |
+| Open command palette | `cmd+shift+p` | `ctrl+shift+p` |
+| Quick file navigation | `cmd+p` | `ctrl+p` |
 
 ### Interface Navigation
 | Action | Mac | Windows |
 |--------|-----|---------|
-| Focus editor | `cmd+1` | `cntrl+1` |
-| Toggle sidebar | `cntrl+q` | `cntrl+q` |
-| Move focus to editor below | `` | `` |
+| Focus editor | `cmd+1` | `ctrl+1` |
+| Toggle sidebar | `control+q` | `ctrl+q` |
+| Move directly to explorer/ or back to editor | `cmd+shift+e` | `ctrl+shift+e` |
+| Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |
 | Go between active files in editor | `control+tab` | `ctrl+tab` |
 
 ### Terminal Operations
 | Action | Mac | Windows |
 |--------|-----|---------|
-| Open terminal | `cmd+backtick` | `cntrl+backtick` |
-| Open new terminal | `cmd+shift+backtick` | `cntrl+shift+backtick` |
+| Open terminal | `cmd+backtick` | `ctrl+backtick` |
+| Open new terminal | `cmd+shift+backtick` | `ctrl+shift+backtick` |
 | Move between multiple terminals | `cmd+shift+[` and `cmd+shift+]` | `ctrl+shift+[` and `ctrl+shift+]` |
 
 ### Editor Operations
@@ -29,10 +30,10 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 |--------|-----|---------|
 | Move line up | `option+up` | `alt+up` |
 | Move line down | `option+down` | `alt+down` |
+| Select current word and subsequent words | `cmd+d` | `` |
 | Set multiple cursors | `option+click` | `alt+click` |
 | Close active editor | `cmd+w` | `` |
-| Close all editors | `` | `` |
-| Select current word and subsequent words | `cmd+d` | `` |
+| Close all editors | `cmd+k w` | `` |
 
 ### File Operations
 | Action | Mac | Windows |
@@ -43,18 +44,20 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ### Search and Replace
 | Action | Mac | Windows |
 |--------|-----|---------|
-| Find across all files | `cmd+shift+f` | `cntrl+shift+f` |
-| Find in files | `cmd+shift+f` | `cntrl+shift+f` |
-| Toggle replace | `` | `ctrl+h` |
-| Go up and down search results | `cmd`+`down` |`cntrl`+`down`|
+| Find across all files | `cmd+shift+f` | `ctrl+shift+f` |
+| Find in files | `cmd+f` | `ctrl+f` |
+| Toggle replace | `cmd+option+f` | `ctrl+h` |
+| Go up and down search results | `cmd`+`down` |`ctrl`+`down`|
 | Replace one | `cmd+Enter` | `Enter` |
 | Replace all | `cmd+Alt+Enter` | `Alt+Enter` |
+| Comment out line | `cmd+/` | `ctrl+/` |
 
 ### GitHub Copilot
 | Action | Mac | Windows |
 |--------|-----|---------|
 | Open GitHub Copilot chat | `cmd+control+i` | `ctrl+alt+i` |
 | Open GitHub Copilot editor | `cmd+shift+i` | `ctrl+shift+i` |
+
 ## Settings
 ```json
 {
