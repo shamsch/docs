@@ -56,7 +56,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | Open GitHub Copilot chat | `cmd+control+i` | `ctrl+alt+i` |
 | Open GitHub Copilot editor | `cmd+shift+i` | `ctrl+shift+i` |
 ## Settings
-``
+```json
+{
 	// SELF SET SETTINGS
 	// JS and TS settings
 	"javascript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when JavaScript files are moved
@@ -133,11 +134,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 		"plaintext": false,
 		"markdown": true,
 		"scminput": false
-	},
-``
+	}
+}
+```
 
 ## Keybindings
-``
+```json
 [
     // SELF SET KEYBINDINGS
     {
@@ -151,4 +153,3 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     
     // OTHER KEYBINDINGS 
 ]
-``
