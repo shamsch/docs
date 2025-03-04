@@ -56,7 +56,6 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 
 - `v` - Select character-wise
 - `V` - Select line-wise
-- `Ctrl-v` - Select block-wise
 - `ggVG` - Select entire file
 - `>>` - Indent selected text
 - `<<` - Unindent selected text
