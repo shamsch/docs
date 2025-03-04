@@ -6,6 +6,7 @@ However, in VSCode, I like to make a few changes. Paste these to your `settings.
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
   "vim.foldfix": true, // prevents fold to unfold when moving with hjkl
+  // override for window to not conflict
   "vim.handleKeys": {
     "<C-c>": false, //copy
     "<C-v>": false, //paste
