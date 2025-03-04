@@ -133,6 +133,8 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 ### Code Navigation
 * `gd` - Go to definition
 * `gf` - Go to file
+* `zc` - Fold (collapse) under cursor
+* `zo` - Open fold under cursor
 
 ## Window Management and Exiting
 
