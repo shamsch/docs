@@ -21,7 +21,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | Create a new editor group                      | `cmd+\`        | `ctrl+\`        |
 | Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |
 | Go between active files in editor              | `control+tab`  | `ctrl+tab`      |
-| Hide/Show explorer							 | `cmd+b`        | `ctrl+b`        |
+| Hide/Show explorer							               | `cmd+b`        | `ctrl+b`        |
 
 ### Terminal Operations
 
@@ -37,10 +37,10 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | ---------------------------------------- | -------------- | ----------- |
 | Move line up                             | `option+up`    | `alt+up`    |
 | Move line down                           | `option+down`  | `alt+down`  |
-| Select current word and subsequent words | `cmd+d`        | ``          |
+| Select current word and subsequent words | `cmd+d`        | `ctrl+d`    |
 | Set multiple cursors                     | `option+click` | `alt+click` |
-| Close active editor                      | `cmd+w`        | ``          |
-| Close all editors                        | `cmd+k w`      | ``          |
+| Close active editor                      | `cmd+w`        | `ctrl+f4`   |
+| Close all editors                        | `cmd+k w`      | `ctrl+k w`  |
 
 ### File Operations
 
@@ -117,7 +117,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "<C-p>": false, // files
     "<C-f>": false, // find
     "<C-a>": false, // select all
-    "<C-q>": false // navigate
+    "<C-q>": false, // navigate
+    "<C-d>": false, // select word
   },
   "vim.leader": "<space>", // leader key
   // because $, *, and g_ is difficult to reach 
