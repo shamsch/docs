@@ -6,67 +6,67 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 
 ### Command Navigation
 
-| Action                | Mac           | Windows        |
-| --------------------- | ------------- | -------------- |
-| Open command palette  | `cmd+shift+p` | `ctrl+shift+p` |
-| Quick file navigation | `cmd+p`       | `ctrl+p`       |
+| Action                | Mac           | Windows        | Comment |
+| --------------------- | ------------- | -------------- | ------- |
+| Open command palette  | `cmd+shift+p` | `ctrl+shift+p` |         |
+| Quick file navigation | `cmd+p`       | `ctrl+p`       |         |
 
 ### Interface Navigation
 
-| Action                                         | Mac            | Windows         |
-| ---------------------------------------------- | -------------- | --------------- |
-| Focus editor                                   | `cmd+1`        | `ctrl+1`        |
-| Toggle sidebar                                 | `control+q`    | `ctrl+q`        |
-| Move directly to explorer/ or back to editor   | `cmd+shift+e`  | `ctrl+shift+e`  |
-| Create a new editor group                      | `cmd+\`        | `ctrl+\`        |
-| Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |
-| Go between active files in editor              | `control+tab`  | `ctrl+tab`      |
-| Hide/Show explorer							               | `cmd+b`        | `ctrl+b`        |
+| Action                                         | Mac            | Windows         | Comment |
+| ---------------------------------------------- | -------------- | --------------- | ------- |
+| Focus editor                                   | `cmd+1`        | `ctrl+1`        |         |
+| Toggle sidebar                                 | `control+q`    | `ctrl+q`        |         |
+| Move directly to explorer/ or back to editor   | `cmd+shift+e`  | `ctrl+shift+e`  |         |
+| Create a new editor group                      | `cmd+\`        | `ctrl+\`        |         |
+| Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |         |
+| Go between active files in editor              | `control+tab`  | `ctrl+tab`      |         |
+| Hide/Show explorer							               | `cmd+b`        | `ctrl+b`        |         |
 
 ### Terminal Operations
 
-| Action                          | Mac                             | Windows                           |
-| ------------------------------- | ------------------------------- | --------------------------------- |
-| Open terminal                   | `cmd+backtick`                  | `ctrl+backtick`                   |
-| Open new terminal               | `cmd+shift+backtick`            | `ctrl+shift+backtick`             |
-| Move between multiple terminals | `cmd+shift+[` and `cmd+shift+]` | `ctrl+pgup` and `ctrl+pgdn`       |
+| Action                          | Mac                             | Windows                           | Comment |
+| ------------------------------- | ------------------------------- | --------------------------------- | ------- |
+| Open terminal                   | `cmd+backtick`                  | `ctrl+backtick`                   |         |
+| Open new terminal               | `cmd+shift+backtick`            | `ctrl+shift+backtick`             |         |
+| Move between multiple terminals | `cmd+shift+[` and `cmd+shift+]` | `ctrl+pgup` and `ctrl+pgdn`       | overriden with custom `keybinding.json` below |
 
 ### Editor Operations
 
-| Action                                   | Mac            | Windows     |
-| ---------------------------------------- | -------------- | ----------- |
-| Move line up                             | `option+up`    | `alt+up`    |
-| Move line down                           | `option+down`  | `alt+down`  |
-| Select current word and subsequent words | `cmd+d`        | `ctrl+d`    |
-| Set multiple cursors                     | `option+click` | `alt+click` |
-| Close active editor                      | `cmd+w`        | `ctrl+f4`   |
-| Close all editors                        | `cmd+k w`      | `ctrl+k w`  |
+| Action                                   | Mac            | Windows     | Comment |
+| ---------------------------------------- | -------------- | ----------- | ------- |
+| Move line up                             | `option+up`    | `alt+up`    |         |
+| Move line down                           | `option+down`  | `alt+down`  |         |
+| Select current word and subsequent words | `cmd+d`        | `ctrl+d`    |         |
+| Set multiple cursors                     | `option+click` | `alt+click` |         |
+| Close active editor                      | `cmd+w`        | `ctrl+f4`   |  use vim `:x!` |
+| Close all editors                        | `cmd+k w`      | `ctrl+k w`  |         |
 
 ### File Operations
 
-| Action                          | Mac              | Windows       |
-| ------------------------------- | ---------------- | ------------- |
-| Create a new file in explorer   | `option+n`       | `alt+n`       |
-| Create a new folder in explorer | `option+shift+n` | `alt+shift+n` |
+| Action                          | Mac              | Windows       | Comment |
+| ------------------------------- | ---------------- | ------------- | ------- |
+| Create a new file in explorer   | `option+n`       | `alt+n`       |         |
+| Create a new folder in explorer | `option+shift+n` | `alt+shift+n` |         |
 
 ### Search and Replace
 
-| Action                        | Mac                        | Windows                     |
-| ----------------------------- | -------------------------- | --------------------------- |
-| Find across all files         | `cmd+shift+f`              | `ctrl+shift+f`              |
-| Find in files                 | `cmd+f`                    | `ctrl+f`                    |
-| Toggle replace                | `cmd+option+f`             | `ctrl+h`                    |
-| Go up and down search results | `cmd+down` and then `down` | `ctrl+down` and then `down` |
-| Replace one                   | `cmd+Enter`                | `Enter`                     |
-| Replace all                   | `cmd+option+Enter`         | `Alt+Enter`                 |
-| Comment out line              | `cmd+/`                    | `ctrl+/`                    |
+| Action                        | Mac                        | Windows                     | Comment |
+| ----------------------------- | -------------------------- | --------------------------- | ------- |
+| Find across all files         | `cmd+shift+f`              | `ctrl+shift+f`              |         |
+| Find in files                 | `cmd+f`                    | `ctrl+f`                    |         |
+| Toggle replace                | `cmd+option+f`             | `ctrl+h`                    |         |
+| Go up and down search results | `cmd+down` and then `down` | `ctrl+down` and then `down` |         |
+| Replace one                   | `cmd+Enter`                | `Enter`                     |         |
+| Replace all                   | `cmd+option+Enter`         | `Alt+Enter`                 |         |
+| Comment out line              | `cmd+/`                    | `ctrl+/`                    |         |
 
 ### GitHub Copilot
 
-| Action                     | Mac             | Windows        |
-| -------------------------- | --------------- | -------------- |
-| Open GitHub Copilot chat   | `cmd+control+i` | `ctrl+alt+i`   |
-| Open GitHub Copilot editor | `cmd+shift+i`   | `ctrl+shift+i` |
+| Action                     | Mac             | Windows        | Comment |
+| -------------------------- | --------------- | -------------- | ------- |
+| Open GitHub Copilot chat   | `cmd+control+i` | `ctrl+alt+i`   |         |
+| Open GitHub Copilot editor | `cmd+shift+i`   | `ctrl+shift+i` |         |
 
 ## Settings
 
