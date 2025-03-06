@@ -29,7 +29,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 | ------------------------------- | ------------------------------- | --------------------------------- |
 | Open terminal                   | `cmd+backtick`                  | `ctrl+backtick`                   |
 | Open new terminal               | `cmd+shift+backtick`            | `ctrl+shift+backtick`             |
-| Move between multiple terminals | `cmd+shift+[` and `cmd+shift+]` | `ctrl+shift+[` and `ctrl+shift+]` |
+| Move between multiple terminals | `cmd+shift+[` and `cmd+shift+]` | `ctrl+pgup` and `ctrl+pgdn`       |
 
 ### Editor Operations
 
@@ -188,6 +188,16 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   {
     "key": "alt+n",
     "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
   }
 
   // OTHER KEYBINDINGS
