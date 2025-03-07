@@ -180,26 +180,29 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 
 ```json
 [
-  // SELF SET KEYBINDINGS
-  {
-    "key": "shift+alt+n",
-    "command": "explorer.newFolder"
-  },
-  {
-    "key": "alt+n",
-    "command": "explorer.newFile"
-  },
-  {
-    "key": "ctrl+pageup",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+pagedown",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
-  }
-
-  // OTHER KEYBINDINGS
+    // SELF SET KEYBINDINGS
+    {
+        "key": "shift+alt+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "alt+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },  
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    }
+    // OTHER KEYBINDINGS
 ]
 ```
