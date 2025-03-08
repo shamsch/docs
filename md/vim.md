@@ -25,6 +25,7 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 - `^` - Jump to beginning of line
 - `$` - Jump to end of line
 - `g_` - Jump to end of line without going to next line
+- `%` - Jump to matching bracket
 - `gg` - Jump to beginning of file
 - `G` - Jump to end of file
 
