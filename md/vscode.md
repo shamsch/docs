@@ -127,7 +127,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "<C-q>": false // navigate
   },
   "vim.leader": "<space>", // leader key
-  // because $, *, and g_ is difficult to reach 
+  // because $, *, and g_ is difficult to reach
   // d should not copy to register, hence prefixed
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -178,9 +178,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "plaintext": false,
     "markdown": true,
     "scminput": false
-  },
+  }
 }
-
 ```
 
 ## Keybindings
