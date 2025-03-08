@@ -99,6 +99,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "editor.bracketPairColorization.enabled": true, // Enables bracket pair colorization
   "workbench.editor.openSideBySideDirection": "down", // Opens editors side by side in a downward direction
   "workbench.sideBar.location": "right",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false, // stops replacing the current file with a newly opened file
   "files.autoSave": "afterDelay", // Automatically saves files after a delay
   "diffEditor.ignoreTrimWhitespace": false, // Does not ignore trim whitespace in the diff editor
   "terminal.integrated.fontFamily": "JetBrains Mono", // Sets the terminal font family
@@ -107,6 +109,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "editor.renderWhitespace": "all", // Renders all whitespace characters in the editor with dots and dashes
   "explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
+  "security.workspace.trust.untrustedFiles": "open", // Just open files
 
   // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
@@ -121,11 +124,10 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "<C-p>": false, // files
     "<C-f>": false, // find
     "<C-a>": false, // select all
-    "<C-q>": false, // navigate
-    "<C-d>": false // select word
+    "<C-q>": false // navigate
   },
   "vim.leader": "<space>", // leader key
-  // because $, *, and g_ is difficult to reach
+  // because $, *, and g_ is difficult to reach 
   // d should not copy to register, hence prefixed
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -176,8 +178,9 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "plaintext": false,
     "markdown": true,
     "scminput": false
-  }
+  },
 }
+
 ```
 
 ## Keybindings
