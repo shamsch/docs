@@ -125,6 +125,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "<C-f>": false, // find
     "<C-a>": false, // select all
     "<C-q>": false // navigate
+    "<C-d>": false, // select word
+    "<C-b>": false, // toggle explorer area on/off
   },
   "vim.leader": "<space>", // leader key
   // because $, *, and g_ is difficult to reach
