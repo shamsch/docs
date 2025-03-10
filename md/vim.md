@@ -36,8 +36,8 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 
 ### Screen Movement
 
-- `Ctrl + u` - Move half page up
-- `Ctrl + d` - Move half page down
+- `Ctrl + u` or `pgup` - Move half page up
+- `Ctrl + d` or `pgdn` - Move half page down
 - `Ctrl + o` - Jump back to previous location
 - `Ctrl + i` - Jump forward to next location
 
