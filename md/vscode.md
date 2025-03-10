@@ -115,18 +115,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
   "vim.foldfix": true, // prevents fold to unfold when moving with hjkl
-  // override for window to not conflict
+   // Only allows Ctrl+I, Ctrl+O, and Ctrl+R for Vim while preserving all other VSCode shortcuts
+  "vim.useCtrlKeys": false, // Globally disable all Ctrl key combinations for Vim
   "vim.handleKeys": {
-    "<C-c>": false, //copy
-    "<C-v>": false, //paste
-    "<C-x>": false, // cut
-    "<C-z>": false, // undo
-    "<C-p>": false, // files
-    "<C-f>": false, // find
-    "<C-a>": false, // select all
-    "<C-q>": false // navigate
-    "<C-d>": false, // select word
-    "<C-b>": false, // toggle explorer area on/off
+    "<C-i>": true, // Jump to newer position in jump list
+    "<C-o>": true, // Jump to older position in jump list
+    "<C-r>": true // Redo or paste from register in insert mode
   },
   "vim.leader": "<space>", // leader key
   // because $, *, and g_ is difficult to reach
