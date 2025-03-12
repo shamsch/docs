@@ -90,6 +90,11 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 - `Ctrl + r` - Redo last undone change
 - `.` - To repeat last command
 
+### Recording Macros
+- `q` - Start recording while in normal mode
+- `q` - Again to stop recording
+- `@` - Play the recorded macro
+
 ## Text Objects and Operators
 
 These commands work with operators: `c` (change), `d` (delete), `y` (copy), and `v` (select).
