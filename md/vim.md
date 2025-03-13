@@ -143,6 +143,7 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 
 - `gd` - Go to definition
 - `gf` - Go to file
+- `gh` - Open hoover (ONLY WORKS IN VS CODE)
 - `zc` - Fold (collapse) under cursor
 - `zo` - Open fold under cursor
 - `zz` - Make the current line center of view
