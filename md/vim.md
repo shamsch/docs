@@ -83,6 +83,7 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 
 - `~` - Change case of character under cursor
 - `g~w` - Change case of word
+- `gg=G` - Format whole file
 
 ### Undo/Redo
 
