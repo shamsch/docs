@@ -144,6 +144,7 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 - `gf` - Go to file
 - `zc` - Fold (collapse) under cursor
 - `zo` - Open fold under cursor
+- `zz` - Make the current line center of view
 
 ## Window Management and Exiting
 
