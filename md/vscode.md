@@ -120,7 +120,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "vim.handleKeys": {
     "<C-i>": true, // Jump to newer position in jump list
     "<C-o>": true, // Jump to older position in jump list
-    "<C-r>": true // Redo or paste from register in insert mode
+    "<C-r>": true, // Redo or paste from register in insert mode
+    "<C-d>": false, // For some reason, it refuses to let go of ctrl+d for word select instead of page down
   },
   "vim.leader": "<space>", // leader key
   // because $, *, and g_ is difficult to reach
