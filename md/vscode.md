@@ -111,7 +111,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
   "security.workspace.trust.untrustedFiles": "open", // Just open files
 
-  // VIM settings
+    // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
   "vim.foldfix": true, // prevents fold to unfold when moving with hjkl
@@ -124,9 +124,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "<C-d>": false, // For some reason, it refuses to let go of ctrl+d for word select instead of page down
   },
   "vim.leader": "<space>", // leader key
-  // because $, *, and g_ is difficult to reach
-  // d should not copy to register, hence prefixed
   "vim.normalModeKeyBindingsNonRecursive": [
+    // because $, *, and g_ is difficult to reach
     {
       "before": ["<leader>", "h"],
       "after": ["^"]
@@ -139,9 +138,20 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
       "before": ["<leader>", "f"],
       "after": ["*"]
     },
+    // d should not copy to register, hence prefixed
     {
       "before": ["d"],
       "after": ["\"", "_", "d"]
+    },
+    // focus previous tab at the left
+    {
+      "before": ["H"], 
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // focus next tab at the right
+    {
+      "before": ["L"], 
+      "commands": ["workbench.action.nextEditor"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -160,8 +170,19 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     {
       "before": ["d"],
       "after": ["\"", "_", "d"]
+    },
+    // focus previous tab at the left
+    {
+      "before": ["H"], 
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // focus next tab at the right
+    {
+      "before": ["L"], 
+      "commands": ["workbench.action.nextEditor"]
     }
   ],
+
   // highlight yanked text
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "yellow",
