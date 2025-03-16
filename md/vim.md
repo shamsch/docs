@@ -137,6 +137,7 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 - `*` - Search for word under cursor
 - `n` - Next search result
 - `N` - Previous search result
+- `r` - to replace character under cursor 
 - `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
 
 ### Code Navigation
