@@ -88,6 +88,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "git.confirmSync": false, // Does not ask for confirmation before syncing changes
 
   // Editor settings
+ // Editor settings
   "editor.fontFamily": "JetBrains Mono", // Sets the editor font family
   "editor.fontLigatures": true, // Disables font ligatures
   "editor.fontSize": 16, // Sets the editor font size
@@ -99,17 +100,14 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "editor.bracketPairColorization.enabled": true, // Enables bracket pair colorization
   "workbench.editor.openSideBySideDirection": "down", // Opens editors side by side in a downward direction
   "workbench.sideBar.location": "right",
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false, // stops replacing the current file with a newly opened file
+  "workbench.editor.enablePreview": false, // prevents new file replacing old open file 
   "files.autoSave": "afterDelay", // Automatically saves files after a delay
   "diffEditor.ignoreTrimWhitespace": false, // Does not ignore trim whitespace in the diff editor
-  "terminal.integrated.fontFamily": "JetBrains Mono", // Sets the terminal font family
-  "workbench.colorTheme": "Visual Studio Dark",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
   "workbench.startupEditor": "none", // Sets the terminal font family
   "editor.renderWhitespace": "all", // Renders all whitespace characters in the editor with dots and dashes
   "explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
-  "security.workspace.trust.untrustedFiles": "open", // Just open files
 
     // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
