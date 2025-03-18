@@ -145,12 +145,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     },
     // focus previous tab at the left
     {
-      "before": ["H"], 
+      "before": ["J"], 
       "commands": ["workbench.action.previousEditor"]
     },
     // focus next tab at the right
     {
-      "before": ["L"], 
+      "before": ["K"], 
       "commands": ["workbench.action.nextEditor"]
     }
   ],
@@ -171,14 +171,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
       "before": ["d"],
       "after": ["\"", "_", "d"]
     },
-    // focus previous tab at the left
     {
-      "before": ["H"], 
+      "before": ["J"], 
       "commands": ["workbench.action.previousEditor"]
     },
-    // focus next tab at the right
     {
-      "before": ["L"], 
+      "before": ["K"], 
       "commands": ["workbench.action.nextEditor"]
     }
   ],
