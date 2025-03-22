@@ -109,7 +109,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "editor.renderWhitespace": "all", // Renders all whitespace characters in the editor with dots and dashes
   "explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
-  "security.workspace.trust.untrustedFiles": "open", // Just open files
 
   // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
@@ -159,11 +158,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     },
     // scroll up and down and center the cursor
     {
-      "before": ["<leader>", "j"],
+      "before": ["<leader>", "d"],
       "after": ["<C-d>", "z", "z"]
     },
     {
-      "before": ["<leader>", "k"],
+      "before": ["<leader>", "u"],
       "after": ["<C-u>", "z", "z"]
     }
   ],
@@ -199,11 +198,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     },
     // scroll up and down and center the cursor
     {
-      "before": ["<leader>", "j"],
+      "before": ["<leader>", "d"],
       "after": ["<C-d>", "z", "z"]
     },
     {
-      "before": ["<leader>", "k"],
+      "before": ["<leader>", "u"],
       "after": ["<C-u>", "z", "z"]
     }
   ],
@@ -230,7 +229,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "plaintext": false,
     "markdown": true,
     "scminput": false
-  }
+  },
+  "security.workspace.trust.untrustedFiles": "open",
 }
 ```
 
