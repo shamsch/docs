@@ -111,17 +111,16 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
   "security.workspace.trust.untrustedFiles": "open", // Just open files
 
-    // VIM settings
+  // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
   "vim.foldfix": true, // prevents fold to unfold when moving with hjkl
-   // Only allows Ctrl+I, Ctrl+O, and Ctrl+R for Vim while preserving all other VSCode shortcuts
+  // Only allows Ctrl+I, Ctrl+O, and Ctrl+R for Vim while preserving all other VSCode shortcuts
   "vim.useCtrlKeys": false, // Globally disable all Ctrl key combinations for Vim
   "vim.handleKeys": {
     "<C-i>": true, // Jump to newer position in jump list
     "<C-o>": true, // Jump to older position in jump list
-    "<C-r>": true, // Redo or paste from register in insert mode
-    "<C-d>": false, // For some reason, it refuses to let go of ctrl+d for word select instead of page down
+    "<C-r>": true // Redo or paste from register in insert mode
   },
   "vim.leader": "<space>", // leader key
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -145,13 +144,27 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     },
     // focus previous tab at the left
     {
-      "before": ["J"], 
+      "before": ["J"],
       "commands": ["workbench.action.previousEditor"]
     },
     // focus next tab at the right
     {
-      "before": ["K"], 
+      "before": ["K"],
       "commands": ["workbench.action.nextEditor"]
+    },
+    // overrides vim from taking over and retains vscode's default behavior for ctrl+d
+    {
+      "before": ["<C-d>"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"]
+    },
+    // scroll up and down and center the cursor
+    {
+      "before": ["<leader>", "j"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "after": ["<C-u>", "z", "z"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -172,15 +185,38 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
       "after": ["\"", "_", "d"]
     },
     {
-      "before": ["J"], 
+      "before": ["J"],
       "commands": ["workbench.action.previousEditor"]
     },
     {
-      "before": ["K"], 
+      "before": ["K"],
       "commands": ["workbench.action.nextEditor"]
+    },
+    // overrides vim from taking over and retains vscode's default behavior for ctrl+d
+    {
+      "before": ["<C-d>"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"]
+    },
+    // scroll up and down and center the cursor
+    {
+      "before": ["<leader>", "j"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "after": ["<C-u>", "z", "z"]
     }
   ],
-
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["g", "_"]
+    }
+  ],
   // highlight yanked text
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "yellow",
