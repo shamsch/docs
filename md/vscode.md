@@ -259,8 +259,16 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor"
+    "key": "ctrl+` f",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+` f",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+` x",
+    "command": "workbench.action.terminal.kill",
   }
   // OTHER KEYBINDINGS
 ]
