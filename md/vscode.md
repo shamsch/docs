@@ -192,12 +192,10 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
       "before": ["K"],
       "commands": ["workbench.action.nextEditor"]
     },
-    // overrides vim from taking over and retains vscode's default behavior for ctrl+d
     {
       "before": ["<C-d>"],
       "commands": ["editor.action.addSelectionToNextFindMatch"]
     },
-    // scroll up and down and center the cursor
     {
       "before": ["<leader>", "d"],
       "after": ["<C-d>", "z", "z"]
@@ -208,6 +206,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    // this is make space+l or h to work with yank/cut/delete
     {
       "before": ["<leader>", "h"],
       "after": ["^"]
