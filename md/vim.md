@@ -120,6 +120,8 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 - `f)` - To closing parenthesis (cursor on character)
 - `f;` - To semicolon (cursor on character)
 
+> press `;` to repeat last `f` or `t` 
+
 ### Examples
 
 - `cit` - Change text inside HTML tags
