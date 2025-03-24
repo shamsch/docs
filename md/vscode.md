@@ -258,13 +258,9 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+` f",
+    "key": "alt+j",
     "command": "workbench.action.toggleMaximizedPanel"
   },
-  {
-    "key": "ctrl+` x",
-    "command": "workbench.action.terminal.kill",
-  }
   // OTHER KEYBINDINGS
 ]
 ```
