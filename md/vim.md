@@ -92,9 +92,9 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 - `.` - To repeat last command
 
 ### Recording Macros
-- `q` - Start recording while in normal mode
+- `q` + `<any_letter>` - Start recording while in normal mode
 - `q` - Again to stop recording
-- `@` - Play the recorded macro
+- `@` + `<that_letter>` - Play the recorded macro
 
 ## Text Objects and Operators
 
