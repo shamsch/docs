@@ -95,7 +95,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "editor.suggestSelection": "first", // Automatically selects the first suggestion when pressing Tab
   "editor.tabCompletion": "on", // Enables tab completion
   "editor.tabSize": 4, // Sets the tab size to 4 spaces
-  "editor.wordWrap": "on", // Enables word wrap
   "editor.minimap.enabled": false, // Disables the minimap
   "editor.bracketPairColorization.enabled": true, // Enables bracket pair colorization
   "workbench.editor.openSideBySideDirection": "down", // Opens editors side by side in a downward direction
