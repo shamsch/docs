@@ -5,103 +5,90 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 
 > I also remap Caps Lock to Esc, but that's a system-wide setting.
 
-## Navigation
+## I. Core Navigation
 
-### Character Movement
-
+### Basic Cursor Movement
 - `h` - Move cursor left
 - `j` - Move cursor down
 - `k` - Move cursor up
 - `l` - Move cursor right
 
-### Word Movement
-
+### Word Navigation
 - `w` - Move to start of next word
 - `b` - Move to beginning of current/previous word
 - `e` - Move to end of word
 
-### Line/File Movement
-
-- `^` - Jump to beginning of line
+### Line Navigation
+- `^` - Jump to beginning of line (first non-blank character)
 - `$` - Jump to end of line
-- `g_` - Jump to end of line without going to next line
-- `%` - Jump to matching bracket
+- `g_` - Jump to end of line (last non-blank character)
+
+### File Navigation
 - `gg` - Jump to beginning of file
 - `G` - Jump to end of file
 
-### Paragraph/Sentence Movement
+## II. Advanced Navigation & Jumping
 
+### By Code Structure
+- `%` - Jump to matching bracket ({}, [], ())
+
+### Semantic Navigation (Paragraphs/Sentences)
 - `]` or `[` - Move over paragraph
 - `(` or `)` - Move over sentence
 
 ### Screen Movement
-
 - `Ctrl + u` or `pgup` - Move half page up
 - `Ctrl + d` or `pgdn` - Move half page down
+
+### Jump History
 - `Ctrl + o` - Jump back to previous location
 - `Ctrl + i` - Jump forward to next location
 
-## Modes
+### Viewport Adjustment
+- `zz` - Make the current line center of view
 
-### Mode Switching
+## III. Modes and Mode Switching
 
+### Entering Normal Mode
 - `Esc` - Return to normal mode
 
-### Insert Mode Commands
-
+### Entering Insert Mode
 - `i` - Insert before cursor
 - `a` - Insert after cursor
 - `o` - Insert on new line below
 
-### Visual Mode Commands
-
+### Entering Visual Mode (Selection)
 - `v` - Select character-wise
 - `V` - Select line-wise
-- `ggVG` - Select entire file
-- `>>` - Indent selected text
-- `<<` - Unindent selected text
 
-## Text Operations
+## IV. Basic Editing Operations
 
-### Delete/Change/Yank (Copy)
-
+### Deleting Characters
 - `x` - Delete character under cursor
+
+### Replacing Characters
+- `r` - to replace character under cursor
+
+### Undo / Redo
+- `u` - Undo last change
+- `Ctrl + r` - Redo last undone change
+
+### Repeat Last Command
+- `.` - To repeat last command
+
+## V. Operators, Motions, and Text Objects (The Vim Grammar)
+
+*Core Concept: Editing often involves combining an **Operator** (`d` delete, `c` change, `y` yank/copy, `v` select visually) with a **Motion** or **Text Object**.*
+
+### Using Motions with Operators (Examples)
 - `dw` - Delete word
 - `dd` - Delete entire line
 - `yw` - Copy word
 - `yy` - Copy entire line
-- `p` - Paste after cursor
-- `:reg` - Show yank registers aka clipboard
-- `"0p` - Paste from yank register 0
-
-### Clipboard Operations
-
-- `"+y` - Copy to system clipboard (works on all platforms)
-- `"+p` - Paste from system clipboard (works on all platforms)
-
-### Change Case
-
-- `~` - Change case of character under cursor
-- `g~w` - Change case of word
-- `gg=G` - Format whole file
-
-### Undo/Redo
-
-- `u` - Undo last change
-- `Ctrl + r` - Redo last undone change
-- `.` - To repeat last command
-
-### Recording Macros
-- `q` + `<any_letter>` - Start recording while in normal mode
-- `q` - Again to stop recording
-- `@` + `<that_letter>` - Play the recorded macro
-
-## Text Objects and Operators
-
-These commands work with operators: `c` (change), `d` (delete), `y` (copy), and `v` (select).
+*(These use operators `d` and `y` with motions `w` and the implicit line motion)*
 
 ### Text Objects
-
+*Define blocks of text. Format: `[operator][i/a][object]` (`i`=inside, `a`=around).*
 - `iw` / `aw` - Inside word / around word with whitespace
 - `i"` / `a"` - Inside quotes / including quotes
 - `i{` / `a{` - Inside braces / including braces
@@ -109,8 +96,8 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 - `it` / `at` - Inside tags / including tags
 - `ip` / `ap` - Inside paragraph / including blank lines
 
-### Motion Commands
-
+### Targeted Motions (f / t)
+*Move *to* or *till* a character on the current line.*
 - `t"` - Till next double quote (cursor before character)
 - `t}` - Till closing curly brace (cursor before character)
 - `t)` - Till closing parenthesis (cursor before character)
@@ -119,47 +106,93 @@ These commands work with operators: `c` (change), `d` (delete), `y` (copy), and 
 - `f}` - To closing curly brace (cursor on character)
 - `f)` - To closing parenthesis (cursor on character)
 - `f;` - To semicolon (cursor on character)
+- `;` - press `;` to repeat last `f` or `t`
 
-> press `;` to repeat last `f` or `t` 
+### Operator + Motion/Object Examples
+- `cit` - Change text inside HTML tags (`c` operator + `it` text object)
+- `dap` - Delete paragraph with blank lines (`d` operator + `ap` text object)
+- `yi"` - Copy text inside quotes (`y` operator + `i"` text object)
+- `va{` - Select code block with braces (`v` operator + `a{` text object)
+- `ct"` - Change text up to quote (`c` operator + `t"` motion)
+- `df)` - Delete up to and including `)` (`d` operator + `f)` motion)
 
-### Examples
+## VI. Yanking, Pasting, and Registers
 
-- `cit` - Change text inside HTML tags
-- `dap` - Delete paragraph with blank lines
-- `yi"` - Copy text inside quotes
-- `va{` - Select code block with braces
-- `ct"` - Change text up to quote
-- `df)` - Delete up to and including `)`
+### Basic Yank/Paste
+- `yw` - Copy word
+- `yy` - Copy entire line
+- `p` - Paste after cursor
 
-## Search and Navigation
+### Viewing Registers
+- `:reg` - Show yank registers aka clipboard
+- `"0p` - Paste from yank register 0
 
-### Search and Replace
+### System Clipboard Interaction
+- `"+y` - Copy to system clipboard (works on all platforms)
+- `"+p` - Paste from system clipboard (works on all platforms)
 
+## VII. Visual Mode Operations (Selection)
+
+### Selecting the Whole File
+- `ggVG` - Select entire file (Combines `gg`, `V`, `G`)
+
+### Acting on Selections
+- `>>` - Indent selected text
+- `<<` - Unindent selected text
+
+### Reselecting Last Selection
+- `gv` - To reselect the last visual selection
+
+## VIII. Search and Replace
+
+### Searching
 - `/` - Start search
 - `*` - Search for word under cursor
 - `n` - Next search result
 - `N` - Previous search result
-- `r` - to replace character under cursor 
+
+### Global Replace
 - `:%s/old/new/g` - Replace all occurrences of 'old' with 'new'
 
-### Code Navigation
+## IX. Code-Specific Navigation & Folding
 
+### Jumping
 - `gd` - Go to definition
 - `gf` - Go to file
+
+### Displaying Information (VS Code Specific)
 - `gh` - Open hoover (ONLY WORKS IN VS CODE)
-- `gv` - To reselect the last visual selection 
+
+### Folding
 - `zc` - Fold (collapse) under cursor
 - `zo` - Open fold under cursor
-- `zz` - Make the current line center of view
 
-## Window Management and Exiting
+## X. Text Formatting & Case Manipulation
 
-### Window Management
+### Changing Case
+- `~` - Change case of character under cursor
+- `g~w` - Change case of word
 
+### Formatting
+- `gg=G` - Format whole file
+
+## XI. Macros (Recording & Playback)
+
+### Recording
+- `q` + `<any_letter>` - Start recording while in normal mode
+- `q` - Again to stop recording
+
+### Playback
+- `@` + `<that_letter>` - Play the recorded macro
+
+## XII. Window Management
+
+### Splitting Windows
 - `:sp` - Split window horizontally
 - `:vsp` - Split window vertically
 
-### Exiting
+## XIII. Saving and Exiting
 
+### Common Exit Commands
 - `:x` - Save and quit
 - `:q!` - Quit without saving
