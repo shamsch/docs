@@ -171,7 +171,8 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 
 ### Changing Case
 - `~` - Change case of character under cursor
-- `g~w` - Change case of word
+- `gUw` - Uppercase word
+- `guw` - Lowercase word
 
 ### Formatting
 - `gg=G` - Format whole file
