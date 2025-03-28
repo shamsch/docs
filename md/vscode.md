@@ -105,6 +105,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "diffEditor.ignoreTrimWhitespace": false, // Does not ignore trim whitespace in the diff editor
   "terminal.integrated.fontFamily": "JetBrains Mono", // Sets the terminal font family
   "workbench.colorTheme": "Visual Studio Dark",
+  "terminal.integrated.suggest.enabled": true, // Enables suggestions in the integrated terminal
   "workbench.startupEditor": "none", // Sets the terminal font family
   "editor.renderWhitespace": "all", // Renders all whitespace characters in the editor with dots and dashes
   "explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
