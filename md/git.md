@@ -4,14 +4,14 @@ Some common git commands I confuse. Don't expect `git add` or `git commit` here.
 
 ## Merge
 ### FF Merge (Fast-Forward Merge)
-- Occurs when the target branch is a direct ancestor of the current branch.
+- It is when the branch being merged has no new commits since the branch was created.
 - No new commit is created; the branch pointer simply moves forward.
 
 ### 3-Way Merge
 - Used when branches have diverged.
 - Creates a new merge commit to combine changes.
 - `merge commit`: A commit with two parent commits, representing the merged branches.
-
+   - This commit usually does not have any changes itself, unless there are merge conflicts.
 ## Rebase
 ### Interactive Rebase
 It allows you to modify your branch's commit. You can:
