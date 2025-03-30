@@ -89,3 +89,5 @@ git cherry-pick <commit-hash>
 - `git remote -v`: List remote repositories.
 - `git pull <remote> <branch>`: Fetch and merge changes from a remote branch.
 - `git push -f`: Force push changes to a remote repository. This will overwrite the remote branch with your local changes, so use with caution.
+- `git push origin +<commit-hash>:<remote-branch>`: Brings the remote branch to the commit hash you specify. This is a force push, so be careful.
+- `git rm -rf --cached .` and `git add .`: When `.gitignore` is not working, this command will remove all files from the index and re-add them, respecting the `.gitignore` file.
