@@ -80,11 +80,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   // SELF SET SETTINGS
 
   // JS and TS settings
-  "javascript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when JavaScript files are moved
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.defaultInterpreterPath": "C:\\Users\\shams\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "typescript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when TypeScript files are moved
 
   // Git settings
-  "git.autofetch": true, // Automatically fetches changes from the remote repository
+  "git.autofetch": true, // Automatically FETCHES changes from the remote repository
   "git.enableSmartCommit": true, // Commit all changes when no files are added/staged for commit
   "git.confirmSync": false, // Does not ask for confirmation before syncing changes
 
@@ -103,15 +104,15 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "workbench.editor.enablePreviewFromQuickOpen": false, // stops replacing the current file with a newly opened file
   "files.autoSave": "afterDelay", // Automatically saves files after a delay
   "diffEditor.ignoreTrimWhitespace": false, // Does not ignore trim whitespace in the diff editor
-  "terminal.integrated.fontFamily": "JetBrains Mono", // Sets the terminal font family
-  "workbench.colorTheme": "Visual Studio Dark",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.suggest.enabled": true, // Enables suggestions in the integrated terminal
   "workbench.startupEditor": "none", // Sets the terminal font family
   "editor.renderWhitespace": "all", // Renders all whitespace characters in the editor with dots and dashes
   "explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
   "security.workspace.trust.untrustedFiles": "open", // Just open files
-
+  "workbench.activityBar.location": "bottom", // Sets the activity bar location to the bottom
+  
   // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
@@ -193,10 +194,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
       "before": ["K"],
       "commands": ["workbench.action.nextEditor"]
     },
+    // overrides vim from taking over and retains vscode's default behavior for ctrl+d
     {
       "before": ["<C-d>"],
       "commands": ["editor.action.addSelectionToNextFindMatch"]
     },
+    // scroll up and down and center the cursor
     {
       "before": ["<leader>", "d"],
       "after": ["<C-d>", "z", "z"]
@@ -207,7 +210,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
-    // this is make space+l or h to work with yank/cut/delete
     {
       "before": ["<leader>", "h"],
       "after": ["^"]
