@@ -13,15 +13,15 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 
 ### Interface Navigation
 
-| Action                                         | Mac            | Windows         | Comment |
-| ---------------------------------------------- | -------------- | --------------- | ------- |
-| Focus editor                                   | `cmd+1`        | `ctrl+1`        |         |
-| Toggle sidebar                                 | `control+q`    | `ctrl+q`        |         |
-| Move directly to explorer/ or back to editor   | `cmd+shift+e`  | `ctrl+shift+e`  |         |
-| Create a new editor group                      | `cmd+\`        | `ctrl+\`        |         |
-| Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |         |
-| Go between active files in editor              | `control+tab`  | `ctrl+tab`      |         |
-| Hide/Show explorer                             | `cmd+b`        | `ctrl+b`        |         |
+| Action                                         | Mac            | Windows         | Comment                    |
+| ---------------------------------------------- | -------------- | --------------- | -------------------------- |
+| Focus editor                                   | `cmd+1`        | `ctrl+1`        | also `shift+e` from custom |
+| Toggle sidebar                                 | `control+q`    | `ctrl+q`        |                            |
+| Move directly to explorer/ or back to editor   | `cmd+shift+e`  | `ctrl+shift+e`  |                            |
+| Create a new editor group                      | `cmd+\`        | `ctrl+\`        |                            |
+| Move focus to other editor sideway or vertical | `cmd+2,3,4...` | `ctrl+2,3,4...` |                            |
+| Go between active files in editor              | `control+tab`  | `ctrl+tab`      |                            |
+| Hide/Show explorer                             | `cmd+b`        | `ctrl+b`        |                            |
 
 ### Terminal Operations
 
@@ -52,19 +52,19 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 
 ### Search and Replace
 
-| Action                          | Mac                        | Windows                     | Comment |
-| ------------------------------- | -------------------------- | --------------------------- | ------- |
-| Find across all files           | `cmd+shift+f`              | `ctrl+shift+f`              |         |
-| Find in files                   | `cmd+f`                    | `ctrl+f`                    |         |
-| To view result in editor area after search                   | `alt+enter`                    | `option+enter`|   mac one is unverified      |
-| Toggle replace                  | `cmd+option+f`             | `ctrl+h`                    |         |
-| Go up and down search results   | `cmd+down` and then `down` | `ctrl+down` and then `down` |         |
-| Replace one                     | `cmd+Enter`                | `Enter`                     |         |
-| Replace all                     | `cmd+option+Enter`         | `Alt+Enter`                 |         |
-| Comment out line                | `cmd+/`                    | `ctrl+/`                    |         |
-| Rename symbol i.e variables, fn | `F2`                       | `F2`                        |         |
-| Find symbol in file             | `cmd+t`                    | `ctrl+t`                    |         |
-| Peek definition                 | `F12`                      | `F12`                       |         |
+| Action                                     | Mac                        | Windows                     | Comment               |
+| ------------------------------------------ | -------------------------- | --------------------------- | --------------------- |
+| Find across all files                      | `cmd+shift+f`              | `ctrl+shift+f`              |                       |
+| Find in files                              | `cmd+f`                    | `ctrl+f`                    |                       |
+| To view result in editor area after search | `alt+enter`                | `option+enter`              | mac one is unverified |
+| Toggle replace                             | `cmd+option+f`             | `ctrl+h`                    |                       |
+| Go up and down search results              | `cmd+down` and then `down` | `ctrl+down` and then `down` |                       |
+| Replace one                                | `cmd+Enter`                | `Enter`                     |                       |
+| Replace all                                | `cmd+option+Enter`         | `Alt+Enter`                 |                       |
+| Comment out line                           | `cmd+/`                    | `ctrl+/`                    |                       |
+| Rename symbol i.e variables, fn            | `F2`                       | `F2`                        |                       |
+| Find symbol in file                        | `cmd+t`                    | `ctrl+t`                    |                       |
+| Peek definition                            | `F12`                      | `F12`                       |                       |
 
 ### GitHub Copilot
 
@@ -81,7 +81,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 
   // JS and TS settings
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "python.defaultInterpreterPath": "C:\\Users\\shams\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "typescript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when TypeScript files are moved
 
   // Git settings
@@ -112,7 +111,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
   "security.workspace.trust.untrustedFiles": "open", // Just open files
   "workbench.activityBar.location": "bottom", // Sets the activity bar location to the bottom
-  
+
   // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
@@ -234,6 +233,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "scminput": false
   },
   "security.workspace.trust.untrustedFiles": "open",
+  "python.defaultInterpreterPath": "C:\\Users\\shams\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
 }
 ```
 
@@ -242,6 +242,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ```json
 [
   // SELF SET KEYBINDINGS
+  // create a new file and folder in explorer
   {
     "key": "shift+alt+n",
     "command": "explorer.newFolder"
@@ -250,6 +251,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "alt+n",
     "command": "explorer.newFile"
   },
+  // move between tabs in terminal
   {
     "key": "ctrl+pageup",
     "command": "workbench.action.terminal.focusPrevious",
@@ -260,9 +262,16 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
+  //make terminal full screen
   {
     "key": "alt+j",
     "command": "workbench.action.toggleMaximizedPanel"
+  },
+  // focus on editor 
+  {
+    "key": "shift+e",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorTextFocus"
   },
   // OTHER KEYBINDINGS
 ]
