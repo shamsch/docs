@@ -39,11 +39,13 @@ first character means:
 - `d` means directory
 - `-` means file
 - `l` means symbolic link
+
 next 3 characters means owner permission:
 - `r` means read
 - `w` means write
 - `x` means execute
 - `-` means no permission
+
 the subsequent 3 character similarly means group permission and then the next 3 means others permissions
 
 ### chmod
