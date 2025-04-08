@@ -266,6 +266,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "alt+j",
     "command": "workbench.action.toggleMaximizedPanel"
   },
+  // toggle on and off github copilot INLINE SUGGESTINS
+  {
+    "key": "shift+alt+i",
+    "command": "github.copilot.completions.toggle",
+  },
   // OTHER KEYBINDINGS
 ]
 ```
