@@ -1,6 +1,6 @@
 ## Linux Torvalds 
 
-Bunch of useful linux commands to know. Tack sy mycket Linux Torvalds.
+Bunch of useful linux commands to know. Tack så mycket Linux Torvalds.
 
 ## ls
 ```bash
