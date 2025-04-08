@@ -31,7 +31,7 @@ Not part of interactive rebase, but somewhat similar:
 - `Revert`: Undo a commit by creating a new commit.
 
 ```bash
-git amend # Modify the last commit
+git commit --amend # Modify the last commit
 git revert <commit-hash> # Undo a commit by creating a new commit
 ```
 
