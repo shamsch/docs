@@ -233,7 +233,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "scminput": false
   },
   "security.workspace.trust.untrustedFiles": "open",
-  "python.defaultInterpreterPath": "C:\\Users\\shams\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
 }
 ```
 
@@ -266,12 +265,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   {
     "key": "alt+j",
     "command": "workbench.action.toggleMaximizedPanel"
-  },
-  // focus on editor 
-  {
-    "key": "shift+e",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorTextFocus"
   },
   // OTHER KEYBINDINGS
 ]
