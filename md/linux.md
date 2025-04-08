@@ -29,7 +29,7 @@ POST request with JSON data, `-H` set header, `-X` set method
 ```bash
 curl -X POST <url> -H "Content-Type: application/json" -d '{"param1":"value1","param2":"value2"}'
 ```
-## file permission 
+### file permission 
 ```bash
 ls -l
 > drwxr-xr-x 2 user group 4096 Jan 1 00:00 directory
@@ -46,7 +46,7 @@ next 3 characters means owner permission:
 - `-` means no permission
 the subsequent 3 character similarly means group permission and then the next 3 means others permissions
 
-## chmod
+### chmod
 read write exectue for owner, group and others
 ```bash 
 chmod 777 <file>
