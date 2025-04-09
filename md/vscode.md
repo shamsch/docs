@@ -111,6 +111,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
   "security.workspace.trust.untrustedFiles": "open", // Just open files
   "workbench.activityBar.location": "bottom", // Sets the activity bar location to the bottom
+  "workbench.activityBar.location": "top", // keep explorer, source control, find etc. on top like Cursor
+  "workbench.layoutControl.enabled": false, // removes unused stuff from top 
 
   // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
