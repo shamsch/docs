@@ -224,6 +224,8 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "vim.highlightedyank.duration": 250,
   // relative lines for easy traversal i.e 10j or 33k
   "editor.lineNumbers": "relative",
+  "find-it-faster.general.useTerminalInEditor": true, 
+  "find-it-faster.general.killTerminalAfterUse": true,
 
   // OTHER AUTO GENERATED SETTINGS
   "github.copilot.enable": {
