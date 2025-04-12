@@ -159,6 +159,8 @@ However, in VSCode, I like to make a few changes. Find these changes with rest o
 ### Jumping
 - `gd` - Go to definition
 - `gf` - Go to file
+- `m<character>` - to set mark
+- `'<character>` - to go to mark 
 
 ### Displaying Information (VS Code Specific)
 - `gh` - Open hoover (ONLY WORKS IN VS CODE)
