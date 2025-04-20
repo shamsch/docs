@@ -80,14 +80,14 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   // SELF SET SETTINGS
 
   // JS and TS settings
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when JavaScript files are moved
   "typescript.updateImportsOnFileMove.enabled": "always", // Automatically updates imports when TypeScript files are moved
-
+  
   // Git settings
   "git.autofetch": true, // Automatically FETCHES changes from the remote repository
   "git.enableSmartCommit": true, // Commit all changes when no files are added/staged for commit
   "git.confirmSync": false, // Does not ask for confirmation before syncing changes
-
+  
   // Editor settings
   "editor.fontFamily": "JetBrains Mono", // Sets the editor font family
   "editor.fontLigatures": true, // Disables font ligatures
@@ -110,7 +110,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "explorer.confirmDelete": false, // Disables the confirmation dialog when deleting files
   "explorer.confirmDragAndDrop": false, // Disables the confirmation dialog when deleting files
   "security.workspace.trust.untrustedFiles": "open", // Just open files
-  "workbench.activityBar.location": "bottom", // Sets the activity bar location to the bottom
   "workbench.activityBar.location": "top", // keep explorer, source control, find etc. on top like Cursor
   "workbench.layoutControl.enabled": false, // removes unused stuff from top 
 
@@ -162,13 +161,13 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     },
     // scroll up and down and center the cursor
     {
-      "before": ["<leader>", "d"],
+      "before": ["<leader>", "j"], 
       "after": ["<C-d>", "z", "z"]
     },
     {
-      "before": ["<leader>", "u"],
+      "before": ["<leader>", "k"],
       "after": ["<C-u>", "z", "z"]
-    }
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -202,11 +201,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     },
     // scroll up and down and center the cursor
     {
-      "before": ["<leader>", "d"],
+      "before": ["<leader>", "j"],
       "after": ["<C-d>", "z", "z"]
     },
     {
-      "before": ["<leader>", "u"],
+      "before": ["<leader>", "k"],
       "after": ["<C-u>", "z", "z"]
     }
   ],
@@ -234,9 +233,13 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "*": true,
     "plaintext": false,
     "markdown": true,
-    "scminput": false
+    "scminput": false,
+    "javascriptreact": true,
+    "go": true
   },
-  "security.workspace.trust.untrustedFiles": "open",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
 ```
 
