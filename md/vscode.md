@@ -113,6 +113,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "workbench.activityBar.location": "top", // keep explorer, source control, find etc. on top like Cursor
   "workbench.layoutControl.enabled": false, // removes unused stuff from top 
 
+
   // VIM settings
   "vim.incsearch": true, // incremental search - does search as you type
   "vim.hlsearch": true, // highlight search - stop using :noh
@@ -225,8 +226,9 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "vim.highlightedyank.duration": 250,
   // relative lines for easy traversal i.e 10j or 33k
   "editor.lineNumbers": "relative",
-  "find-it-faster.general.useTerminalInEditor": true, 
-  "find-it-faster.general.killTerminalAfterUse": true,
+  //search
+  "search.searchOnType": true,
+  "search.searchEditor.focusResultsOnSearch": true,
 
   // OTHER AUTO GENERATED SETTINGS
   "github.copilot.enable": {
