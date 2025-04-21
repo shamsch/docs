@@ -271,6 +271,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "shift+alt+i",
     "command": "github.copilot.completions.toggle"
   },
+  // trigger suggestions
+  {
+    "key": "shift+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorTextFocus && !editorHasSelection && !suggestWidgetVisible"
+  },
   
   // BINDINGS INSPIRED FROM THIS GIST ON GITHUB
   // https://gist.github.com/nikolovlazar/1174876ab2769c52ac9fc1534c557d70
