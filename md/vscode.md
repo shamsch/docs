@@ -250,15 +250,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ```json
 [
   // SELF SET KEYBINDINGS
-  // create a new file and folder in explorer
-  {
-    "key": "shift+alt+n",
-    "command": "explorer.newFolder"
-  },
-  {
-    "key": "alt+n",
-    "command": "explorer.newFile"
-  },
   // move between tabs in terminal
   {
     "key": "ctrl+pageup",
@@ -278,8 +269,92 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   // toggle on and off github copilot INLINE SUGGESTINS
   {
     "key": "shift+alt+i",
-    "command": "github.copilot.completions.toggle",
+    "command": "github.copilot.completions.toggle"
   },
+  
+  // BINDINGS INSPIRED FROM THIS GIST ON GITHUB
+  // https://gist.github.com/nikolovlazar/1174876ab2769c52ac9fc1534c557d70
+  
+  // EXPLOERE KEYBINDINGS
+  // STARTS HERE
+
+  // rename a file => r
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // copy a file with => c
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // paste a file with => p
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // cut a file with => x
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // delete a file with => d
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // create a new file with => a
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // create a new folder with => shift+a
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // split to bottom => s
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // split to the left => shift+s
+  {
+    "key": "shift-s",
+    "command": "runCommands",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+    "args": {
+      "commands": [
+        "workbench.action.splitEditorLeft",
+        "explorer.openAndPassFocus",
+        "workbench.action.closeOtherEditors"
+      ]
+    }
+  },
+  // open a file with => enter
+  {
+    "key": "enter",
+    "command": "explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
+  },
+  // unfold a folder within the explorer with => enter
+  {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
+  },
+
+  // END HERE
+
+
   // OTHER KEYBINDINGS
 ]
 ```
