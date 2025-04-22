@@ -168,227 +168,223 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ```json
 [
     // SELF SET KEYBINDINGS
-    // github copilot toggle => space a i
+    
+    // terminal stuff
+    // move between tabs in terminal
     {
-        "key": "space a i",
-        "command": "github.copilot.completions.toggle",
-        "when": "vim.mode == 'Normal'"
+        "key": "ctrl+pageup",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    //make terminal full screen
+    {
+        "key": "alt+j",
+        "command": "workbench.action.toggleMaximizedPanel"
     },
 
     // VIM stuff remapped here
-
     // because $, *, and g_ is difficult to reach
     {
-        "key": "space h",
-        "command": "vim.remap",
-        "when": "vim.mode == 'Normal'",
         "args": {
             "after": [
-                "^"
+               "^", "x" 
             ]
-        }
+        },
+        "command": "vim.remap",
+        "key": "space h",
+        "when": "vim.mode == 'Normal' && editorTextFocus "
     },
     {
-        "key": "space l",
-        "command": "vim.remap",
-        "when": "vim.mode == 'Normal'",
         "args": {
             "after": [
                 "g",
                 "_"
             ]
-        }
+        },
+        "command": "vim.remap",
+        "key": "space l",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
     },
     {
-        "key": "space f",
-        "command": "vim.remap",
-        "when": "vim.mode == 'Normal'",
         "args": {
             "after": [
                 "*"
             ]
-        }
+        },
+        "command": "vim.remap",
+        "key": "space f",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
     },
     // scroll down and center the cursor
     {
-        "key": "space j",
-        "command": "vim.remap",
-        "when": "vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine'",
         "args": {
             "after": [
                 "<C-d>",
                 "z",
                 "z"
             ]
-        }
+        },
+        "command": "vim.remap",
+        "key": "space j",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus"
     },
     {
-        "key": "space k",
-        "command": "vim.remap",
-        "when": "vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine'",
         "args": {
             "after": [
                 "<C-u>",
                 "z",
                 "z"
             ]
-        }
+        },
+        "command": "vim.remap",
+        "key": "space k",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus"
     },
-    
+
     // BINDINGS INSPIRED FROM THIS GIST ON GITHUB
     // https://gist.github.com/nikolovlazar/1174876ab2769c52ac9fc1534c557d70
-    
+
     // STARTS HERE
-    
+
     // --- NAVIGATION ---
     // focus previous tab at the left => shift+j
     {
-        "key": "shift+j",
         "command": "workbench.action.previousEditor",
-        "when": "vim.mode == 'Normal'"
+        "key": "shift-j",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     // focus next tab at the right => shift+k
     {
-        "key": "shift+k",
         "command": "workbench.action.nextEditor",
-        "when": "vim.mode == 'Normal'"
+        "key": "shift-k",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     // go to left split => control+h
     {
+        "command": "workbench.action.navigateLeft",
         "key": "ctrl-h",
-        "command": "workbench.action.navigateLeft"
+        "when": "vim.mode == 'Normal'"
     },
     // go to right split => control+l
     {
+        "command": "workbench.action.navigateRight",
         "key": "ctrl-l",
-        "command": "workbench.action.navigateRight"
+        "when": "vim.mode == 'Normal'"
     },
     // go to top split => control+k
     {
+        "command": "workbench.action.navigateUp",
         "key": "ctrl-k",
-        "command": "workbench.action.navigateUp"
+        "when": "vim.mode == 'Normal'"
     },
     // go to bottom split => control+j
     {
+        "command": "workbench.action.navigateDown",
         "key": "ctrl-j",
-        "command": "workbench.action.navigateDown"
+        "when": "vim.mode == 'Normal'"
     },
     // open all active editor => space , (comma)
     {
-        "key": "space ,",
         "command": "workbench.action.showAllEditors",
+        "key": "space ,",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     // toggle explorer sidebar and focus => space e
     {
-        "key": "space e",
-        "command": "runCommands",
         "args": {
             "commands": [
                 "workbench.action.toggleSidebarVisibility",
                 "workbench.files.action.focusFilesExplorer"
             ]
         },
+        "command": "runCommands",
+        "key": "space e",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
     },
     {
-        "key": "space e",
-        "command": "runCommands",
         "args": {
             "commands": [
                 "workbench.action.toggleSidebarVisibility",
                 "workbench.action.focusActiveEditorGroup"
             ]
         },
+        "command": "runCommands",
+        "key": "space e",
         "when": "sideBarFocus && !inputFocus"
     },
     {
+        "command": "workbench.action.toggleSidebarVisibility",
         "key": "space e",
-        "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
-        "command": "workbench.action.toggleSidebarVisibility"
+        "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible"
     },
 
     // --- EXPLOERE ---
     // rename a file => r
     {
-        "key": "r",
         "command": "renameFile",
+        "key": "r",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     // copy a file with => c
     {
-        "key": "c",
         "command": "filesExplorer.copy",
+        "key": "c",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     // paste a file with => p
     {
-        "key": "p",
         "command": "filesExplorer.paste",
+        "key": "p",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     // cut a file with => x
     {
-        "key": "x",
         "command": "filesExplorer.cut",
+        "key": "x",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     // delete a file with => d
     {
-        "key": "d",
         "command": "deleteFile",
+        "key": "d",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     // create a new file with => a
     {
-        "key": "a",
         "command": "explorer.newFile",
+        "key": "a",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     // create a new folder with => shift+a
     {
-        "key": "shift+a",
         "command": "explorer.newFolder",
+        "key": "shift+a",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    // split to bottom => s
-    {
-        "key": "s",
-        "command": "explorer.openToSide",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    // split to the left => shift+s
-    {
-        "key": "shift-s",
-        "command": "runCommands",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
-        "args": {
-            "commands": [
-                "workbench.action.splitEditorLeft",
-                "explorer.openAndPassFocus",
-                "workbench.action.closeOtherEditors"
-            ]
-        }
     },
     // open a file with => enter
     {
-        "key": "enter",
         "command": "explorer.openAndPassFocus",
+        "key": "enter",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
     },
     // unfold a folder within the explorer with => enter
     {
-        "key": "enter",
         "command": "list.toggleExpand",
+        "key": "enter",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
     },
 
     // --- CODING ---
     // open code action => space c a
     {
-        "key": "space c a",
         "command": "editor.action.codeAction",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
+        "key": "space c a",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !suggestWidgetVisible"
     },
     // open code suggestion => space c s
     {
@@ -400,7 +396,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     {
         "key": "space c r",
         "command": "editor.action.rename",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     // buffer/editor delete => space b x
     {
@@ -414,17 +410,17 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
         "command": "workbench.action.closeOtherEditors",
         "when": "(vim.mode == 'Normal' && editorTextFocus) || !inputFocus"
     },
-    // quick open aka ctrl+p => space space
-    {
-        "key": "space space",
-        "command": "workbench.action.quickOpen",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-    },
     // close all buffers/editors => space b a
     {
         "key": "space b a",
         "command": "workbench.action.closeAllEditors",
         "when": "(vim.mode == 'Normal' && editorTextFocus) || !inputFocus"
+    },
+    // quick open aka ctrl+p => space space
+    {
+        "key": "space space",
+        "command": "workbench.action.quickOpen",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     // go to definition but open aside => space g d
     {
@@ -462,46 +458,16 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
     },
-    // --- TERMINAL ---
-    // toggle terminal panel => space t t
+
+    // --- GitHub Copilot ---
+    // github copilot toggle => space a i
     {
-        "key": "space t t",
-        "command": "workbench.action.togglePanel",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || panelFocus || !inputFocus)"
-    },
-    // terminal kill => space t x
-    {
-        "key": "space t x",
-        "command": "workbench.action.terminal.kill",
-        "when": "vim.mode == 'Normal' && terminalFocus"
-    },
-    // create new terminal instance => space t n
-    {
-        "key": "space t n",
-        "command": "workbench.action.terminal.new",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || panelFocus || !inputFocus)"
-    },
-    // go to next terminal => space t j
-    {
-        "key": "space t j",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "vim.mode == 'Normal' && terminalFocus"
-    },
-    // go to prev terminal => space t k
-    {
-        "key": "space t k",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "vim.mode == 'Normal' && terminalFocus"
-    },
-    // maximize/minimize terminal => space t m
-    {
-        "key": "space t m",
-        "command": "workbench.action.toggleMaximizedPanel",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus || terminalFocus)"
+        "command": "github.copilot.completions.toggle",
+        "key": "space a i",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
     },
 
     // END HERE
-
     // OTHER KEYBINDINGS
 ]
 ```
