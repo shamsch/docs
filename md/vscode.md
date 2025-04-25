@@ -229,7 +229,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "alt+t",
     "args": {
       "commands": [
-        "workbench.action.toggleMaximizedPanel",
+        "workbench.action.terminal.toggleTerminal",
         "workbench.action.closeSidebar"
       ]
     },
