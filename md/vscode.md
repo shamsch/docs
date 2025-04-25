@@ -171,7 +171,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
 ```json
 [
   // SELF SET KEYBINDINGS
-
   // terminal stuff
   // move between tabs in terminal
   {
@@ -198,7 +197,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   // split a terminal
   {
-    "key": "alt+\\", 
+    "key": "alt+\\",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
   },
@@ -216,20 +215,34 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   //make terminal full screen
   {
     "key": "alt+f",
-    "command": "workbench.action.toggleMaximizedPanel",
+    "args": {
+      "commands": [
+        "workbench.action.toggleMaximizedPanel",
+        "workbench.action.closeSidebar"
+      ]
+    },
+    "command": "runCommands",
     "when": "terminalFocus"
   },
   // toggle terminal from anywhere
   {
     "key": "alt+t",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "args": {
+      "commands": [
+        "workbench.action.toggleMaximizedPanel",
+        "workbench.action.closeSidebar"
+      ]
+    },
+    "command": "runCommands",
   },
-
   // VIM stuff remapped here
   // because $, *, and g_ is difficult to reach
   {
     "args": {
-      "after": ["^", "x"]
+      "after": [
+        "^",
+        "x"
+      ]
     },
     "command": "vim.remap",
     "key": "space h",
@@ -237,7 +250,10 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   {
     "args": {
-      "after": ["g", "_"]
+      "after": [
+        "g",
+        "_"
+      ]
     },
     "command": "vim.remap",
     "key": "space l",
@@ -245,7 +261,9 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   {
     "args": {
-      "after": ["*"]
+      "after": [
+        "*"
+      ]
     },
     "command": "vim.remap",
     "key": "space f",
@@ -254,7 +272,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   // scroll down and center the cursor
   {
     "args": {
-      "after": ["<C-d>", "z", "z"]
+      "after": [
+        "<C-d>",
+        "z",
+        "z"
+      ]
     },
     "command": "vim.remap",
     "key": "space j",
@@ -262,18 +284,19 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   {
     "args": {
-      "after": ["<C-u>", "z", "z"]
+      "after": [
+        "<C-u>",
+        "z",
+        "z"
+      ]
     },
     "command": "vim.remap",
     "key": "space k",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus"
   },
-
   // BINDINGS INSPIRED FROM THIS GIST ON GITHUB
   // https://gist.github.com/nikolovlazar/1174876ab2769c52ac9fc1534c557d70
-
   // STARTS HERE
-
   // --- NAVIGATION ---
   // focus previous tab at the left => shift+j
   {
@@ -345,7 +368,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "space e",
     "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible"
   },
-
   // --- EXPLOERE ---
   // rename a file => r
   {
@@ -401,7 +423,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "enter",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
   },
-
   // --- CODING ---
   // open code action => space c a
   {
@@ -469,7 +490,10 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "runCommands",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
     "args": {
-      "commands": ["workbench.view.scm", "workbench.scm.focus"]
+      "commands": [
+        "workbench.view.scm",
+        "workbench.scm.focus"
+      ]
     }
   },
   // next match => control+n
@@ -478,7 +502,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
-
   // --- GitHub Copilot ---
   // github copilot toggle => space a i
   {
@@ -486,7 +509,6 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "key": "space a i",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   }
-
   // END HERE
   // OTHER KEYBINDINGS
 ]
