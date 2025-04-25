@@ -175,19 +175,54 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   // terminal stuff
   // move between tabs in terminal
   {
-    "key": "ctrl+pageup",
+    "key": "alt+k",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+pagedown",
+    "key": "alt+j",
     "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  // kill a terminal
+  {
+    "key": "alt+x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // new terminal
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  // split a terminal
+  {
+    "key": "alt+\\", 
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  // move between the splits
+  {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
   //make terminal full screen
   {
-    "key": "alt+j",
-    "command": "workbench.action.toggleMaximizedPanel"
+    "key": "alt+f",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  // toggle terminal from anywhere
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.toggleTerminal"
   },
 
   // VIM stuff remapped here
