@@ -233,16 +233,13 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
         "workbench.action.closeSidebar"
       ]
     },
-    "command": "runCommands",
+    "command": "runCommands"
   },
   // VIM stuff remapped here
   // because $, *, and g_ is difficult to reach
   {
     "args": {
-      "after": [
-        "^",
-        "x"
-      ]
+      "after": ["^"]
     },
     "command": "vim.remap",
     "key": "space h",
@@ -320,7 +317,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   {
     "command": "workbench.action.navigateRight",
     "key": "ctrl-l",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && !workbench.panel.chat.view.copilot.active"
   },
   // go to top split => control+k
   {
