@@ -236,7 +236,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "runCommands"
   },
   // VIM stuff remapped here
-  // because $, *, and g_ is difficult to reach
+  // because $, ^, and g_ is difficult to reach
   {
     "args": {
       "after": ["^"]
@@ -304,7 +304,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   {
     "command": "workbench.action.navigateRight",
     "key": "ctrl-l",
-    "when": "vim.mode == 'Normal' && !workbench.panel.chat.view.copilot.active"
+    "when": "vim.mode == 'Normal'"
   },
   // go to top split => control+k
   {
@@ -489,8 +489,32 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "github.copilot.completions.toggle",
     "key": "space a i",
     "when": "vim.mode == 'Normal' && editorTextFocus"
-  }
+  },
   // END HERE
   // OTHER KEYBINDINGS
+  
+  // RESET KEYBINDINGS FOR GITHUB COPILOT CHAT
+  // CTRL + I FOR NEW CHAT INSTEAD OF CTRL + L
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.chat.newEditSession",
+    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newEditSession",
+    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat && !config.chat.unifiedChatView && chatLocation != 'editing-session'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat && !config.chat.unifiedChatView && chatLocation != 'editing-session'"
+  },
+  
 ]
 ```
