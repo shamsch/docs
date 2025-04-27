@@ -247,10 +247,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   {
     "args": {
-      "after": [
-        "g",
-        "_"
-      ]
+      "after": ["g", "_"]
     },
     "command": "vim.remap",
     "key": "space l",
@@ -258,9 +255,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   {
     "args": {
-      "after": [
-        "*"
-      ]
+      "after": ["*"]
     },
     "command": "vim.remap",
     "key": "space f",
@@ -269,11 +264,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   // scroll down and center the cursor
   {
     "args": {
-      "after": [
-        "<C-d>",
-        "z",
-        "z"
-      ]
+      "after": ["<C-d>", "z", "z"]
     },
     "command": "vim.remap",
     "key": "space j",
@@ -281,11 +272,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   },
   {
     "args": {
-      "after": [
-        "<C-u>",
-        "z",
-        "z"
-      ]
+      "after": ["<C-u>", "z", "z"]
     },
     "command": "vim.remap",
     "key": "space k",
@@ -487,10 +474,7 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "runCommands",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
     "args": {
-      "commands": [
-        "workbench.view.scm",
-        "workbench.scm.focus"
-      ]
+      "commands": ["workbench.view.scm", "workbench.scm.focus"]
     }
   },
   // next match => control+n
