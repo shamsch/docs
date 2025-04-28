@@ -147,9 +147,12 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
   "vim.highlightedyank.duration": 250,
   // relative lines for easy traversal i.e 10j or 33k
   "editor.lineNumbers": "relative",
-  //search
+   //search
   "search.searchOnType": true,
   "search.searchEditor.focusResultsOnSearch": true,
+  //fzf search
+  "find-it-faster.general.useTerminalInEditor": true, 
+  "find-it-faster.general.killTerminalAfterUse": true,
 
   // OTHER AUTO GENERATED SETTINGS
   "github.copilot.enable": {
@@ -456,16 +459,19 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "editor.action.revealDefinitionAside",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
-  // search globally => space s g
+ // search globally => space s g
   {
     "key": "space s g",
-    "command": "workbench.action.findInFiles",
+    "command": "find-it-faster.findWithinFiles",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   // search locally => space s l
   {
     "key": "space s l",
     "command": "actions.find",
+    "args": {
+      "searchString": "${currentWord}"
+    },
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // open git => space g g
@@ -476,6 +482,18 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "args": {
       "commands": ["workbench.view.scm", "workbench.scm.focus"]
     }
+  },
+  // open lazygit => space g l
+  {
+    "key": "space g l",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.new",
+        { "command": "workbench.action.terminal.sendSequence", "args": { "text": "lazygit\u000D" } }
+      ]
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   // next match => control+n
   {
