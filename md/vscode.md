@@ -533,6 +533,66 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "-workbench.action.chat.newChat",
     "when": "chatIsEnabled && inChat && !config.chat.unifiedChatView && chatLocation != 'editing-session'"
   },
-  
+  {
+    "key": "ctrl+cmd+tab",
+    "command": "calva-fmt.formatCurrentForm",
+    "when": "editorLangId == 'clojure'"
+  },
+
+  // Calva Keybinds 
+  // Load file to REPL with control, alt, cmd, enter
+  {
+    "key": "ctrl+alt+cmd+enter",
+    "command": "calva.loadFile",
+    "when": "calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  // disable default, because it doesn't work at the first place
+  {
+    "key": "ctrl+alt+c enter",
+    "command": "-calva.loadFile",
+    "when": "calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  // Slurp Sexp Forward with control, alt, cmd, l
+  {
+    "key": "ctrl+alt+cmd+l",
+    "command": "paredit.slurpSexpForward",
+    "when": "editorLangId == 'clojure'"
+  },
+  // Slurp Sexp Backward with control, alt, cmd, h
+  {
+    "key": "ctrl+alt+cmd+h",
+    "command": "paredit.slurpSexpBackward",
+    "when": "editorLangId == 'clojure'"
+  },
+  // Barf Sexp Forward with control, alt, cmd, j
+  {
+    "key": "ctrl+alt+cmd+j",
+    "command": "paredit.barfSexpForward",
+    "when": "editorLangId == 'clojure'"
+  },
+  // Barf Sexp Backward with control, alt, cmd, k
+  {
+    "key": "ctrl+alt+cmd+k",
+    "command": "paredit.barfSexpBackward",
+    "when": "editorLangId == 'clojure'"
+  },
+  // Kill Sexp with control, alt, cmd, x
+  {
+    "key": "ctrl+alt+cmd+x",
+    "command": "paredit.killSexp",
+    "when": "editorLangId == 'clojure'"
+  },
+  // Join Sexp with control, alt, cmd, j
+  {
+    "key": "ctrl+alt+cmd+j",
+    "command": "paredit.joinSexp",
+    "when": "editorLangId == 'clojure'"
+  },
+  // Split Sexp with control, alt, cmd, s
+  {
+    "key": "ctrl+alt+cmd+s",
+    "command": "paredit.splitSexp",
+    "when": "editorLangId == 'clojure'"
+  },
 ]
 ```
