@@ -576,23 +576,11 @@ This outlines list of useful shortcuts in VS Code, `settings.json`, and `keybind
     "command": "paredit.barfSexpBackward",
     "when": "editorLangId == 'clojure'"
   },
-  // Kill Sexp with control, alt, cmd, x
+  // Remove format from TAB because that's for Github Copliot 
   {
-    "key": "ctrl+alt+cmd+x",
-    "command": "paredit.killSexp",
-    "when": "editorLangId == 'clojure'"
-  },
-  // Join Sexp with control, alt, cmd, j
-  {
-    "key": "ctrl+alt+cmd+j",
-    "command": "paredit.joinSexp",
-    "when": "editorLangId == 'clojure'"
-  },
-  // Split Sexp with control, alt, cmd, s
-  {
-    "key": "ctrl+alt+cmd+s",
-    "command": "paredit.splitSexp",
-    "when": "editorLangId == 'clojure'"
+    "key": "tab",
+    "command": "-calva-fmt.formatCurrentForm",
+    "when": "calva:keybindingsEnabled && editorTextFocus && !editorReadOnly && !hasOtherSuggestions && !inSnippetMode && !inlineSuggestionVisible && !suggestWidgetVisible && editorLangId == 'clojure'"
   },
 ]
 ```
